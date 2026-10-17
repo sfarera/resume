@@ -21,6 +21,7 @@
     <script src="cv-template/clean.js"></script>
     <script src="cv-template/classic.js"></script>
     <script src="cv-template/twopage.js"></script>
+    <script src="cv-template/onepage.js"></script>
 
     <style id="dynamic-style"></style>
     <style>
@@ -122,6 +123,7 @@
 
     <div id="control-panel">
         <h4>Select Design</h4>
+        <button class="pattern-btn" onclick="startRender('onepage')" style="background: rgba(16,185,129,0.22); border-color: #10b981;">📄 1-Page Executive (A4)</button>
         <button class="pattern-btn active" onclick="startRender('twopage')" style="background: rgba(37,99,235,0.25); border-color: #3b82f6;">⭐ 2-Page Executive (A4)</button>
         <button class="pattern-btn" onclick="startRender('split')">1. Split View</button>
         <button class="pattern-btn" onclick="startRender('glass')">2. Glassmorphism</button>
@@ -132,10 +134,10 @@
             style="background: linear-gradient(135deg, #4f46e5, #7c3aed); border-color: #6366f1; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:6px; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);">
             <i class="fas fa-eye"></i> Recruiter Preview
         </button>
-        <a href="Shubham_Farera_Resume_2Page.pdf" download="Shubham_Farera_Resume_2Page.pdf" class="pattern-btn"
-            style="background:#10b981; border-color:#059669; font-weight:bold; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
+        <button class="pattern-btn" onclick="downloadCurrentPDF()"
+            style="background:#10b981; border-color:#059669; font-weight:bold; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px;">
             <i class="fas fa-file-pdf"></i> Download PDF
-        </a>
+        </button>
         <button class="pattern-btn" onclick="window.print()"
             style="background:var(--accent); border-color:var(--accent); font-weight:bold; display:flex; align-items:center; justify-content:center; gap:6px;">
             <i class="fas fa-print"></i> Print / Save PDF
@@ -260,10 +262,14 @@
         }
 
         // --- RENDER CONTROLLER ---
+        let CURRENT_PATTERN = 'twopage';
+
         function startRender(pattern) {
+            CURRENT_PATTERN = pattern;
             document.querySelectorAll('.pattern-btn').forEach(b => b.classList.remove('active'));
             document.querySelector(`button[onclick="startRender('${pattern}')"]`)?.classList.add('active');
 
+            if (pattern === 'onepage' && window.renderOnePage) window.renderOnePage(DATA, ROOT, STYLE);
             if (pattern === 'twopage' && window.renderTwoPage) window.renderTwoPage(DATA, ROOT, STYLE);
             if (pattern === 'split' && window.renderSplit) window.renderSplit(DATA, ROOT, STYLE);
             if (pattern === 'glass' && window.renderGlass) window.renderGlass(DATA, ROOT, STYLE);
@@ -275,14 +281,15 @@
 
         function openPreview() {
             const urlParams = new URLSearchParams(window.location.search);
-            const template = urlParams.get('template') || 'twopage';
+            const template = CURRENT_PATTERN || urlParams.get('template') || 'onepage';
             const user = urlParams.get('user') || CURRENT_USER || 'shubhamfarera';
             window.open(`preview.html?user=${user}&template=${template}`, '_blank');
         }
 
         function copyPreviewLink() {
             const base = window.location.origin + window.location.pathname.replace(/[^/]*$/, '');
-            const previewUrl = `${base}preview.html`;
+            const template = CURRENT_PATTERN || 'onepage';
+            const previewUrl = `${base}preview.html?template=${template}`;
             navigator.clipboard.writeText(previewUrl).then(() => {
                 const btn = document.getElementById('copy-btn');
                 if (btn) {
@@ -293,6 +300,14 @@
             }).catch(() => {
                 prompt('Recruiter preview link:', previewUrl);
             });
+        }
+
+        function downloadCurrentPDF() {
+            if (CURRENT_PATTERN === 'onepage') {
+                window.location.href = 'Shubham_Farera_Resume_1Page.pdf';
+            } else {
+                window.location.href = 'Shubham_Farera_Resume_2Page.pdf';
+            }
         }
 
         // --- EDITING LOGIC ---

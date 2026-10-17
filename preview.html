@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Pattern Templates -->
+    <script src="cv-template/onepage.js"></script>
     <script src="cv-template/twopage.js"></script>
     <script src="cv-template/split.js"></script>
     <script src="cv-template/glass.js"></script>
@@ -109,11 +110,13 @@
                 DATA.education = education;
                 DATA.highlights = highlights;
 
-                if (pattern === 'twopage' && window.renderTwoPage) window.renderTwoPage(DATA, ROOT, STYLE);
+                if (pattern === 'onepage' && window.renderOnePage) window.renderOnePage(DATA, ROOT, STYLE);
+                else if (pattern === 'twopage' && window.renderTwoPage) window.renderTwoPage(DATA, ROOT, STYLE);
                 else if (pattern === 'split' && window.renderSplit) window.renderSplit(DATA, ROOT, STYLE);
                 else if (pattern === 'glass' && window.renderGlass) window.renderGlass(DATA, ROOT, STYLE);
                 else if (pattern === 'clean' && window.renderClean) window.renderClean(DATA, ROOT, STYLE);
                 else if (pattern === 'classic' && window.renderClassic) window.renderClassic(DATA, ROOT, STYLE);
+                else if (window.renderOnePage) window.renderOnePage(DATA, ROOT, STYLE);
                 else if (window.renderTwoPage) window.renderTwoPage(DATA, ROOT, STYLE);
             } catch (e) {
                 console.error(e);
