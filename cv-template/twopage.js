@@ -265,7 +265,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         @media print {
             @page {
                 size: A4 portrait;
-                margin: 0 !important;
+                margin: 8mm 14mm 8mm 14mm !important;
             }
 
             html, body {
@@ -273,7 +273,8 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                 padding: 0 !important;
                 margin: 0 !important;
                 width: 100% !important;
-                height: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
                 overflow: visible !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
@@ -285,31 +286,40 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                 gap: 0 !important;
                 display: block !important;
                 width: 100% !important;
+                height: auto !important;
             }
 
             .cv-sheet {
-                width: 210mm !important;
-                height: 297mm !important;
-                min-height: 297mm !important;
-                max-height: 297mm !important;
-                padding: 13mm 17mm 11mm 17mm !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
+                max-height: none !important;
+                padding: 0 !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 border: none !important;
                 border-radius: 0 !important;
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
-                overflow: hidden !important;
+                overflow: visible !important;
+                box-sizing: border-box !important;
             }
 
             #page-1 {
                 page-break-after: always !important;
                 break-after: page !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
             }
 
             #page-2 {
                 page-break-after: avoid !important;
                 break-after: avoid !important;
+                page-break-before: avoid !important;
+                break-before: avoid !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
             }
 
             #control-panel, .edit-trigger {

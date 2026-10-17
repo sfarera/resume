@@ -221,7 +221,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         @media print {
             @page {
                 size: A4 portrait;
-                margin: 0 !important;
+                margin: 6mm 12mm 6mm 12mm !important;
             }
 
             html, body {
@@ -229,8 +229,9 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 padding: 0 !important;
                 margin: 0 !important;
                 width: 100% !important;
-                height: 100% !important;
-                overflow: hidden !important;
+                height: auto !important;
+                min-height: 0 !important;
+                overflow: visible !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
@@ -241,14 +242,16 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 gap: 0 !important;
                 display: block !important;
                 width: 100% !important;
+                height: auto !important;
             }
 
             .cv-sheet-onepage {
-                width: 210mm !important;
-                height: 297mm !important;
-                min-height: 297mm !important;
-                max-height: 297mm !important;
-                padding: 10mm 15mm 8mm 15mm !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
+                max-height: none !important;
+                padding: 0 !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 border: none !important;
@@ -257,7 +260,8 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 break-inside: avoid !important;
                 page-break-after: avoid !important;
                 break-after: avoid !important;
-                overflow: hidden !important;
+                overflow: visible !important;
+                box-sizing: border-box !important;
             }
 
             #control-panel, .edit-trigger {
