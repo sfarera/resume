@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Resume Builder | Shubham Sharma</title>
+    <title>Shubham Farera — Senior Software Engineer (SDE-3) | Resume</title>
+    <meta name="description" content="Resume of Shubham Farera — Senior Software Engineer (SDE-3) specializing in Distributed Systems, Java 17, Spring Boot, Apache Kafka, Saga Pattern, and Low-Level Design.">
+    <meta property="og:title" content="Shubham Farera — Senior Software Engineer (SDE-3) | Resume">
+    <meta property="og:description" content="8.5+ years experience architecting high-throughput distributed systems, Kafka event streams, and microservices.">
     <!-- Common Libs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,20 +122,24 @@
 
     <div id="control-panel">
         <h4>Select Design</h4>
-        <button class="pattern-btn" onclick="startRender('twopage')" style="background: rgba(37,99,235,0.25); border-color: #3b82f6;">⭐ 2-Page Executive (A4)</button>
+        <button class="pattern-btn active" onclick="startRender('twopage')" style="background: rgba(37,99,235,0.25); border-color: #3b82f6;">⭐ 2-Page Executive (A4)</button>
         <button class="pattern-btn" onclick="startRender('split')">1. Split View</button>
         <button class="pattern-btn" onclick="startRender('glass')">2. Glassmorphism</button>
         <button class="pattern-btn" onclick="startRender('clean')">3. Modern Clean</button>
         <button class="pattern-btn" onclick="startRender('classic')">4. Classic Dark</button>
-        <div style="height:1px; background:rgba(255,255,255,0.1); margin:10px 0;"></div>
-        <button class="pattern-btn" onclick="window.location.href='index.html'"
-            style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1); margin-bottom: 5px;">
-            <i class="fas fa-arrow-left"></i> Change Profile
-        </button>
+        <div style="height:1px; background:rgba(255,255,255,0.1); margin:8px 0;"></div>
+        <a href="Shubham_Farera_Resume_2Page.pdf" download="Shubham_Farera_Resume_2Page.pdf" class="pattern-btn"
+            style="background:#10b981; border-color:#059669; font-weight:bold; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <i class="fas fa-file-pdf"></i> Download PDF
+        </a>
         <button class="pattern-btn" onclick="window.print()"
-            style="background:var(--accent); border-color:var(--accent); font-weight:bold;">
-            <i class="fas fa-download"></i> Download PDF
+            style="background:var(--accent); border-color:var(--accent); font-weight:bold; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <i class="fas fa-print"></i> Print / Save PDF
         </button>
+        <a href="profiles.html" class="pattern-btn"
+            style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1); text-align:center; text-decoration:none; font-size:0.8rem; color:#94a3b8; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <i class="fas fa-users"></i> All Profiles
+        </a>
     </div>
 
     <div id="app-root">
@@ -198,14 +205,14 @@
         const ROOT = document.getElementById('app-root');
         const STYLE = document.getElementById('dynamic-style');
 
-        let CURRENT_USER = 'shubham';
+        let CURRENT_USER = 'shubhamfarera';
         let CURRENT_FILE = ''; // e.g., 'profile.json'
 
         // Fetch Data
         async function loadContent() {
             try {
                 const params = new URLSearchParams(window.location.search);
-                const userId = params.get('user') || 'shubham';
+                const userId = params.get('user') || 'shubhamfarera';
                 CURRENT_USER = userId;
 
                 console.log(`Loading profile for: ${userId}`);
@@ -256,6 +263,9 @@
         // --- EDITING LOGIC ---
 
         function renderEditButtons() {
+            // Only show edit controls on local development
+            if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') return;
+
             // Remove existing edit buttons to avoid duplicates
             document.querySelectorAll('.edit-trigger').forEach(e => e.remove());
 
