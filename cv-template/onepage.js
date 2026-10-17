@@ -20,7 +20,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 1.5rem 0;
-            line-height: 1.36;
+            line-height: 1.34;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -35,7 +35,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             width: 210mm;
             min-height: 297mm;
             max-height: 297mm;
-            padding: 10mm 15mm 8mm 15mm;
+            padding: 9mm 14mm 7mm 14mm;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             border-radius: 2px;
@@ -50,12 +50,12 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         .cv-header-onepage {
             text-align: center;
             border-bottom: 1.5px solid var(--primary);
-            padding-bottom: 6px;
-            margin-bottom: 8px;
+            padding-bottom: 5px;
+            margin-bottom: 7px;
         }
 
         .cv-header-onepage h1 {
-            font-size: 1.60rem;
+            font-size: 1.55rem;
             font-weight: 700;
             color: var(--primary);
             margin: 0 0 2px 0;
@@ -65,10 +65,10 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         }
 
         .cv-header-onepage .cv-headline {
-            font-size: 0.85rem;
+            font-size: 0.83rem;
             font-weight: 600;
             color: var(--accent);
-            margin: 0 0 5px 0;
+            margin: 0 0 4px 0;
             letter-spacing: 0.1px;
         }
 
@@ -76,8 +76,8 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 4px 14px;
-            font-size: 0.76rem;
+            gap: 4px 13px;
+            font-size: 0.75rem;
             color: var(--text-muted);
         }
 
@@ -99,22 +99,22 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
 
         /* Standard ATS Headings */
         .cv-sec-title-onepage {
-            font-size: 0.82rem;
+            font-size: 0.80rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin: 8px 0 4px 0;
-            padding-bottom: 2px;
+            margin: 7px 0 3.5px 0;
+            padding-bottom: 1.5px;
             border-bottom: 1.2px solid var(--border);
         }
 
         /* Summary */
         .cv-summary-onepage {
-            font-size: 0.76rem;
+            font-size: 0.745rem;
             color: var(--text-body);
-            margin: 0 0 5px 0;
-            line-height: 1.38;
+            margin: 0 0 4px 0;
+            line-height: 1.35;
             text-align: justify;
         }
 
@@ -122,36 +122,36 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         .cv-skills-grid-onepage {
             display: flex;
             flex-direction: column;
-            gap: 2.5px;
-            margin-bottom: 6px;
-            font-size: 0.75rem;
+            gap: 2px;
+            margin-bottom: 4px;
+            font-size: 0.74rem;
         }
 
         .cv-skill-line-onepage {
-            line-height: 1.34;
+            line-height: 1.32;
         }
 
         .cv-skill-line-onepage strong {
             color: var(--primary);
             font-weight: 700;
             display: inline-block;
-            min-width: 155px;
+            min-width: 145px;
         }
 
         /* Job Entry */
         .cv-job-onepage {
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         .cv-job-header-onepage {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2.5px;
+            margin-bottom: 2px;
         }
 
         .cv-job-role-onepage {
-            font-size: 0.82rem;
+            font-size: 0.80rem;
             font-weight: 700;
             color: var(--primary);
         }
@@ -159,11 +159,11 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         .cv-job-company-onepage {
             color: var(--text-body);
             font-weight: 600;
-            font-size: 0.81rem;
+            font-size: 0.79rem;
         }
 
         .cv-job-date-onepage {
-            font-size: 0.74rem;
+            font-size: 0.73rem;
             font-weight: 600;
             color: var(--text-muted);
             white-space: nowrap;
@@ -172,32 +172,64 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         .cv-job-bullets-onepage {
             margin: 0;
             padding-left: 14px;
-            font-size: 0.745rem;
+            font-size: 0.735rem;
             color: var(--text-body);
-            line-height: 1.34;
+            line-height: 1.32;
         }
 
         .cv-job-bullets-onepage li {
-            margin-bottom: 2.5px;
+            margin-bottom: 2px;
             text-align: justify;
         }
 
-        .cv-job-bullets-onepage li strong {
+        /* Project Entry */
+        .cv-proj-onepage {
+            margin-bottom: 4px;
+        }
+
+        .cv-proj-header-onepage {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.77rem;
+            margin-bottom: 1.5px;
+        }
+
+        .cv-proj-name-onepage {
+            font-weight: 700;
             color: var(--primary);
+        }
+
+        .cv-proj-tech-onepage {
+            color: var(--accent);
+            font-size: 0.73rem;
             font-weight: 600;
+        }
+
+        .cv-proj-bullets-onepage {
+            margin: 0;
+            padding-left: 14px;
+            font-size: 0.73rem;
+            color: var(--text-body);
+            line-height: 1.30;
+        }
+
+        .cv-proj-bullets-onepage li {
+            margin-bottom: 1.5px;
+            text-align: justify;
         }
 
         /* Bottom Grid: Education & Certifications */
         .cv-bottom-grid-onepage {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 14px;
-            margin-top: 4px;
+            gap: 12px;
+            margin-top: 3px;
         }
 
         .cv-meta-item-onepage {
-            font-size: 0.75rem;
-            line-height: 1.34;
+            font-size: 0.73rem;
+            line-height: 1.30;
             color: var(--text-body);
         }
 
@@ -208,12 +240,12 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         /* Sheet Footer */
         .cv-sheet-footer-onepage {
             margin-top: auto;
-            padding-top: 4px;
+            padding-top: 3px;
             border-top: 1px solid var(--border-light);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.67rem;
+            font-size: 0.66rem;
             color: var(--text-muted);
         }
 
@@ -272,8 +304,6 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
 
     const tcsJob = DATA.journey[0]; // TCS
     const accSrAnalyst = DATA.journey[1]; // Accenture Sr Analyst (Sept 2021 - Aug 2023)
-    const accAnalyst = DATA.journey[2]; // Accenture Analyst (May 2020 - Aug 2021)
-    const accAssociate = DATA.journey[3]; // Accenture Associate (Feb 2018 - Apr 2020)
 
     const githubSocial = DATA.profile.social.find(s => s.platform.toLowerCase().includes('github'));
     const linkedinSocial = DATA.profile.social.find(s => s.platform.toLowerCase().includes('linkedin'));
@@ -283,7 +313,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             <section class="cv-sheet-onepage">
                 <header class="cv-header-onepage">
                     <h1>${DATA.profile.name}</h1>
-                    <div class="cv-headline">Senior Backend Software Engineer | Java | Spring Boot | Microservices | Distributed Systems</div>
+                    <div class="cv-headline">Senior Java Backend Developer | Java | Spring Boot | REST APIs | Microservices | SQL</div>
                     <div class="cv-contact-bar">
                         <span>${DATA.profile.contact.location}</span>
                         <span class="cv-contact-sep">•</span>
@@ -303,20 +333,20 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 <div class="cv-sec-title-onepage">Technical Skills</div>
                 <div class="cv-skills-grid-onepage">
                     <div class="cv-skill-line-onepage">
-                        <strong>Languages & Backend:</strong>
-                        <span>Java (8 / 11 / 17), SQL, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs</span>
+                        <strong>Professional Core:</strong>
+                        <span>Java (8/11/17), OOP, Collections, Streams, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs</span>
                     </div>
                     <div class="cv-skill-line-onepage">
-                        <strong>Messaging & Databases:</strong>
-                        <span>Apache Kafka, MySQL, Oracle, Elasticsearch, Redis</span>
+                        <strong>Databases & Quality:</strong>
+                        <span>SQL, MySQL, Oracle, JUnit, Mockito, Unit Testing, Debugging & Troubleshooting, SonarQube</span>
                     </div>
                     <div class="cv-skill-line-onepage">
-                        <strong>Testing & DevOps:</strong>
-                        <span>JUnit, Mockito, SonarQube, CodeQL, Git, Docker, Jenkins CI/CD, Maven</span>
+                        <strong>Tools & Build:</strong>
+                        <span>Git, Maven, Docker, Jenkins CI/CD</span>
                     </div>
                     <div class="cv-skill-line-onepage">
-                        <strong>Architecture & Cloud:</strong>
-                        <span>Microservices Architecture, Event-Driven Architecture, SOLID Principles, Azure (AZ-900)</span>
+                        <strong>Additional Knowledge:</strong>
+                        <span>Apache Kafka, Elasticsearch, Redis, Microservices Architecture, Distributed Systems Concepts, HLD & LLD</span>
                     </div>
                 </div>
 
@@ -332,11 +362,10 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                         <span class="cv-job-date-onepage">${tcsJob.date}</span>
                     </div>
                     <ul class="cv-job-bullets-onepage">
-                        <li>Developed Java 17 and Spring Boot microservices supporting healthcare claims processing and policy underwriting workflows with high availability.</li>
-                        <li>Implemented Kafka producers and consumers for asynchronous service communication with schema validation, serialization, and error recovery.</li>
-                        <li>Contributed to distributed workflow implementation across billing and policy services using Kafka event-driven messaging and retry handling.</li>
-                        <li>Optimized Elasticsearch queries, index mappings, and analyzer configurations for policy lookup, improving response times from ~450ms to sub-150ms.</li>
-                        <li>Optimized relational database queries, table indexing, and supported MySQL/Oracle primary-replica configurations with Redis caching.</li>
+                        <li>Developed and maintained Java and Spring Boot backend services supporting enterprise business workflows.</li>
+                        <li>Implemented REST APIs for application features with input validation, exception handling, and database integration.</li>
+                        <li>Worked with Spring Data JPA and Hibernate for database operations, entity mappings, and business logic.</li>
+                        <li>Investigated application defects, resolved backend issues through debugging, and developed JUnit/Mockito test suites.</li>
                     </ul>
                 </div>
 
@@ -349,9 +378,9 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                         <span class="cv-job-date-onepage">${accSrAnalyst.date}</span>
                     </div>
                     <ul class="cv-job-bullets-onepage">
-                        <li>Developed backend RESTful microservices for automated portfolio rebalancing within a wealth management platform supporting $500M+ in AUM.</li>
-                        <li>Engineered secure, idempotent REST APIs to integrate internal workflows with external banking gateways and financial settlement networks.</li>
-                        <li>Optimized Spring Data JPA queries and database indexing for batch settlement processing, reducing execution times by ~35%.</li>
+                        <li>Developed backend RESTful services using Java and Spring Boot to support wealth management business workflows.</li>
+                        <li>Implemented and integrated REST APIs with internal backend modules and external financial service gateways.</li>
+                        <li>Wrote and maintained database queries and entity mappings using Spring Data JPA and Hibernate for data processing.</li>
                     </ul>
                 </div>
 
@@ -359,13 +388,41 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 <div class="cv-job-onepage">
                     <div class="cv-job-header-onepage">
                         <div>
-                            <span class="cv-job-role-onepage">Software Engineer Progression (Analyst & Associate)</span> — <span class="cv-job-company-onepage">Accenture</span>
+                            <span class="cv-job-role-onepage">Application Development Analyst & Associate</span> — <span class="cv-job-company-onepage">Accenture</span>
                         </div>
                         <span class="cv-job-date-onepage">Feb 2018 – Aug 2021</span>
                     </div>
                     <ul class="cv-job-bullets-onepage">
-                        <li>Developed REST APIs (Java, Spring Boot, JPA) for an order tracking platform handling up to 200K+ daily orders; applied State/Strategy patterns.</li>
-                        <li>Developed core Java batch utilities for public assistance case management; authored JUnit/Mockito test suites achieving reliable coverage.</li>
+                        <li>Developed backend REST APIs using Java, Spring Boot, and JPA for order processing workflows with validation and error handling.</li>
+                        <li>Developed core Java application modules and scheduled batch processing jobs; authored JUnit tests and resolved defect tickets.</li>
+                    </ul>
+                </div>
+
+                <!-- Selected Hands-On Projects -->
+                <div class="cv-sec-title-onepage">Selected Hands-On Projects</div>
+                <div class="cv-proj-onepage">
+                    <div class="cv-proj-header-onepage">
+                        <div>
+                            <span class="cv-proj-name-onepage">Parking Lot System</span>
+                            <span class="cv-proj-tech-onepage">| Java, Spring Boot, REST APIs, Object-Oriented Design</span>
+                        </div>
+                        <span style="font-size: 0.71rem; color: var(--text-muted);">github.com/sfarera</span>
+                    </div>
+                    <ul class="cv-proj-bullets-onepage">
+                        <li>Implemented low-level design using Factory and Strategy patterns for parking spot allocation and dynamic fee calculation; exposed REST APIs for check-in/out.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-proj-onepage">
+                    <div class="cv-proj-header-onepage">
+                        <div>
+                            <span class="cv-proj-name-onepage">Movie Ticket Booking System</span>
+                            <span class="cv-proj-tech-onepage">| Java, Spring Boot, JPA, Transaction Management</span>
+                        </div>
+                        <span style="font-size: 0.71rem; color: var(--text-muted);">github.com/sfarera</span>
+                    </div>
+                    <ul class="cv-proj-bullets-onepage">
+                        <li>Engineered booking service with concurrency handling and transactional seat locking (@Transactional) to prevent double-booking.</li>
                     </ul>
                 </div>
 
@@ -389,7 +446,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
 
                 <!-- Sheet Footer -->
                 <div class="cv-sheet-footer-onepage">
-                    <span>${DATA.profile.name} — Senior Backend Software Engineer</span>
+                    <span>${DATA.profile.name} — Senior Java Backend Developer</span>
                     <span>1-Page Executive Resume</span>
                 </div>
             </section>

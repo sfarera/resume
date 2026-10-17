@@ -4,12 +4,12 @@
     "company": "Tata Consultancy Services",
     "date": "Oct 2023 – Present",
     "details": [
-      "Developed Java 17 and Spring Boot microservices supporting healthcare claims processing and policy underwriting workflows, ensuring high system availability and reliable error recovery.",
-      "Developed Kafka producers and consumers for asynchronous communication between backend services, implementing schema validation, message serialization, and dead-letter queue error handling.",
-      "Contributed to distributed workflow implementation across billing and policy services using Kafka event-driven messaging and compensatory retry handling.",
-      "Optimized Elasticsearch queries, index mappings, and analyzer configurations for policy lookup, improving search response times from ~450ms to sub-150ms.",
-      "Optimized relational database queries, table indexing, and supported MySQL/Oracle primary-replica configurations with Redis caching to reduce query latency and database load.",
-      "Integrated Jenkins CI/CD deployment pipelines with automated CodeQL static analysis and SonarQube quality gates to enforce code quality standards and prevent defect escapes."
+      "Developed and maintained Java and Spring Boot backend services supporting enterprise business workflows.",
+      "Implemented REST APIs for application features, including request validation, exception handling, and database integration.",
+      "Worked with Spring Data JPA and Hibernate to implement database operations, entity mappings, and business logic.",
+      "Investigated application defects and resolved backend issues through debugging, log analysis, and code fixes.",
+      "Developed unit tests using JUnit and Mockito to validate business logic and improve code reliability.",
+      "Participated in Agile development, peer code reviews, and release deployment activities."
     ]
   },
   {
@@ -17,10 +17,10 @@
     "company": "Accenture",
     "date": "Sept 2021 – Aug 2023",
     "details": [
-      "Developed backend RESTful microservices for automated portfolio rebalancing workflows within a wealth management platform supporting over $500M in assets under management (AUM).",
-      "Engineered secure, idempotent REST APIs to integrate internal portfolio workflows with external banking gateways and third-party financial settlement networks.",
-      "Optimized Spring Data JPA queries, database indexing, and Hibernate configurations for end-of-day batch settlement processing, reducing execution times by ~35%.",
-      "Mentored junior engineers through technical design discussions and peer code reviews, helping improve code quality and maintainability."
+      "Developed backend RESTful services using Java and Spring Boot to support wealth management business workflows.",
+      "Implemented and integrated REST APIs with internal backend modules and external financial service gateways.",
+      "Wrote and maintained database queries and entity mappings using Spring Data JPA and Hibernate for data processing.",
+      "Participated in peer code reviews, sprint planning, and Agile delivery ceremonies to maintain code quality standards."
     ]
   },
   {
@@ -28,9 +28,10 @@
     "company": "Accenture",
     "date": "May 2020 – Aug 2021",
     "details": [
-      "Developed backend REST APIs using Java, Spring Boot, and Spring Data JPA for an order processing and shipment tracking platform handling up to 200K+ daily orders.",
-      "Implemented State and Strategy design patterns to manage multi-stage shipment lifecycles, ensuring clean status transitions and business rule validation.",
-      "Optimized database queries and HikariCP connection pool configurations, reducing API latency during peak shipment processing windows."
+      "Developed backend REST APIs using Java, Spring Boot, and Spring Data JPA for order processing and tracking workflows.",
+      "Implemented business logic, request validation, and exception handling to ensure robust API behavior.",
+      "Maintained relational database interactions and resolved backend defects identified during QA testing cycles.",
+      "Collaborated with cross-functional teams in daily standups and sprint retrospectives to deliver scheduled features."
     ]
   },
   {
@@ -38,9 +39,10 @@
     "company": "Accenture",
     "date": "Feb 2018 – Apr 2020",
     "details": [
-      "Developed core Java application modules, data transformation utilities, and scheduled batch jobs supporting public assistance case management systems.",
-      "Authored automated unit and integration tests using JUnit and Mockito, ensuring reliable test coverage and resolving production defect tickets ahead of SLA deadlines.",
-      "Collaborated with cross-functional teams in an Agile environment to participate in sprint planning, backlog grooming, and root cause analysis (RCA) for client-reported issues."
+      "Developed core Java application modules and scheduled batch processing jobs for public assistance case management systems.",
+      "Authored automated unit tests using JUnit and Mockito to validate business logic and improve test coverage.",
+      "Investigated defect tickets, performed debugging and root cause analysis, and deployed code fixes within SLA timelines.",
+      "Collaborated with senior developers on requirements analysis and technical documentation."
     ]
   }
 ]

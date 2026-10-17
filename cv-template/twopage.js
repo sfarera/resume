@@ -20,7 +20,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 1.5rem 0;
-            line-height: 1.44;
+            line-height: 1.42;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -36,7 +36,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             width: 210mm;
             min-height: 297mm;
             height: 297mm;
-            padding: 13mm 17mm 11mm 17mm;
+            padding: 12mm 16mm 10mm 16mm;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             border-radius: 2px;
@@ -51,12 +51,12 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         .cv-header {
             text-align: center;
             border-bottom: 1.5px solid var(--primary);
-            padding-bottom: 9px;
-            margin-bottom: 11px;
+            padding-bottom: 8px;
+            margin-bottom: 9px;
         }
 
         .cv-header h1 {
-            font-size: 1.72rem;
+            font-size: 1.68rem;
             font-weight: 700;
             color: var(--primary);
             margin: 0 0 3px 0;
@@ -66,10 +66,10 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         }
 
         .cv-header .cv-headline {
-            font-size: 0.89rem;
+            font-size: 0.86rem;
             font-weight: 600;
             color: var(--accent);
-            margin: 0 0 7px 0;
+            margin: 0 0 6px 0;
             letter-spacing: 0.1px;
         }
 
@@ -77,8 +77,8 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 6px 15px;
-            font-size: 0.78rem;
+            gap: 5px 14px;
+            font-size: 0.77rem;
             color: var(--text-muted);
         }
 
@@ -100,43 +100,55 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         /* Standard ATS Headings */
         .cv-sec-title {
-            font-size: 0.86rem;
+            font-size: 0.84rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin: 11px 0 6px 0;
-            padding-bottom: 2.5px;
+            margin: 9px 0 5px 0;
+            padding-bottom: 2px;
             border-bottom: 1.2px solid var(--border);
         }
 
         /* Summary */
         .cv-summary-text {
-            font-size: 0.79rem;
+            font-size: 0.775rem;
             color: var(--text-body);
-            margin: 0 0 6px 0;
-            line-height: 1.46;
+            margin: 0 0 5px 0;
+            line-height: 1.42;
             text-align: justify;
         }
 
         /* Technical Skills Section */
+        .cv-skills-subgroup {
+            margin-bottom: 4px;
+        }
+
+        .cv-skills-subtitle {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin: 3px 0 2px 0;
+        }
+
         .cv-skills-grid {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            margin-bottom: 7px;
-            font-size: 0.78rem;
+            gap: 3px;
+            font-size: 0.765rem;
         }
 
         .cv-skill-line {
-            line-height: 1.40;
+            line-height: 1.38;
         }
 
         .cv-skill-line strong {
             color: var(--primary);
             font-weight: 700;
             display: inline-block;
-            min-width: 160px;
+            min-width: 150px;
         }
 
         .cv-skill-line span {
@@ -145,18 +157,18 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         /* Experience Section */
         .cv-job {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .cv-job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 3.5px;
+            margin-bottom: 3px;
         }
 
         .cv-job-title-group {
-            font-size: 0.84rem;
+            font-size: 0.82rem;
         }
 
         .cv-job-role {
@@ -170,7 +182,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         }
 
         .cv-job-meta {
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             font-weight: 600;
             color: var(--text-muted);
             white-space: nowrap;
@@ -179,13 +191,13 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         .cv-job-bullets {
             margin: 0;
             padding-left: 15px;
-            font-size: 0.775rem;
+            font-size: 0.765rem;
             color: var(--text-body);
-            line-height: 1.42;
+            line-height: 1.39;
         }
 
         .cv-job-bullets li {
-            margin-bottom: 4.5px;
+            margin-bottom: 3.5px;
             text-align: justify;
         }
 
@@ -194,36 +206,67 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             font-weight: 600;
         }
 
-        /* Leadership / Practices Bullets */
-        .cv-leadership-bullets {
+        /* Project Entry */
+        .cv-project-item {
+            margin-bottom: 7px;
+        }
+
+        .cv-project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2.5px;
+            font-size: 0.81rem;
+        }
+
+        .cv-project-name {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .cv-project-tech {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-left: 6px;
+        }
+
+        .cv-project-link {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cv-project-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .cv-project-bullets {
             margin: 0;
             padding-left: 15px;
-            font-size: 0.775rem;
+            font-size: 0.76rem;
             color: var(--text-body);
-            line-height: 1.42;
+            line-height: 1.38;
         }
 
-        .cv-leadership-bullets li {
-            margin-bottom: 5px;
+        .cv-project-bullets li {
+            margin-bottom: 3px;
             text-align: justify;
-        }
-
-        .cv-leadership-bullets li strong {
-            color: var(--primary);
-            font-weight: 600;
         }
 
         /* Education & Certifications */
         .cv-item-block {
-            margin-bottom: 7px;
+            margin-bottom: 6px;
         }
 
         .cv-item-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.80rem;
-            margin-bottom: 2.5px;
+            font-size: 0.79rem;
+            margin-bottom: 2px;
         }
 
         .cv-item-title {
@@ -233,31 +276,31 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         .cv-item-inst {
             color: var(--text-muted);
-            font-size: 0.77rem;
+            font-size: 0.76rem;
         }
 
         .cv-item-date {
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             font-weight: 600;
             color: var(--text-muted);
             white-space: nowrap;
         }
 
         .cv-item-details {
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             color: var(--text-body);
-            line-height: 1.38;
+            line-height: 1.36;
         }
 
         /* Sheet Footer */
         .cv-sheet-footer {
             margin-top: auto;
-            padding-top: 5px;
+            padding-top: 4px;
             border-top: 1px solid var(--border-light);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.68rem;
+            font-size: 0.67rem;
             color: var(--text-muted);
         }
 
@@ -328,7 +371,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         }
     `;
 
-    const tcsJob = DATA.journey[0]; // TCS
+    const tcsJob = DATA.journey[0]; // TCS (Oct 2023 - Present)
     const accSrAnalyst = DATA.journey[1]; // Accenture Sr Analyst (Sept 2021 - Aug 2023)
     const accAnalyst = DATA.journey[2]; // Accenture Analyst (May 2020 - Aug 2021)
     const accAssociate = DATA.journey[3]; // Accenture Associate (Feb 2018 - Apr 2020)
@@ -343,7 +386,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                 <!-- Header (Single Column, ATS Clean, No Photo) -->
                 <header class="cv-header">
                     <h1>${DATA.profile.name}</h1>
-                    <div class="cv-headline">Senior Backend Software Engineer | Java | Spring Boot | Microservices | Distributed Systems</div>
+                    <div class="cv-headline">Senior Java Backend Developer | Java | Spring Boot | REST APIs | Microservices | SQL</div>
                     <div class="cv-contact-bar">
                         <span>${DATA.profile.contact.location}</span>
                         <span class="cv-contact-sep">•</span>
@@ -361,38 +404,40 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
                 <!-- Technical Skills -->
                 <div class="cv-sec-title">Technical Skills</div>
-                <div class="cv-skills-grid">
-                    <div class="cv-skill-line">
-                        <strong>Languages:</strong>
-                        <span>Java (8 / 11 / 17), SQL</span>
+
+                <div class="cv-skills-subgroup">
+                    <div class="cv-skills-subtitle">Professional Technical Skills (Production Experience)</div>
+                    <div class="cv-skills-grid">
+                        <div class="cv-skill-line">
+                            <strong>Core Java & Fundamentals:</strong>
+                            <span>Java 8 / 11 / 17, Object-Oriented Programming (OOP), Collections Framework, Streams API, Exception Handling, Multithreading</span>
+                        </div>
+                        <div class="cv-skill-line">
+                            <strong>Backend & Frameworks:</strong>
+                            <span>Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST API Development, Dependency Injection, Transaction Management</span>
+                        </div>
+                        <div class="cv-skill-line">
+                            <strong>Databases & Persistence:</strong>
+                            <span>SQL, Relational Databases (MySQL, Oracle)</span>
+                        </div>
+                        <div class="cv-skill-line">
+                            <strong>Testing & Code Quality:</strong>
+                            <span>JUnit, Mockito, Unit Testing, Debugging & Troubleshooting, SonarQube</span>
+                        </div>
+                        <div class="cv-skill-line">
+                            <strong>Build & DevOps Tools:</strong>
+                            <span>Git, Maven, Docker, Jenkins CI/CD</span>
+                        </div>
                     </div>
-                    <div class="cv-skill-line">
-                        <strong>Backend Frameworks:</strong>
-                        <span>Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs</span>
-                    </div>
-                    <div class="cv-skill-line">
-                        <strong>Messaging & Streaming:</strong>
-                        <span>Apache Kafka</span>
-                    </div>
-                    <div class="cv-skill-line">
-                        <strong>Databases & Search:</strong>
-                        <span>MySQL, Oracle, Elasticsearch, Redis</span>
-                    </div>
-                    <div class="cv-skill-line">
-                        <strong>Testing & Quality:</strong>
-                        <span>JUnit, Mockito, SonarQube, CodeQL Static Analysis</span>
-                    </div>
-                    <div class="cv-skill-line">
-                        <strong>DevOps & Tools:</strong>
-                        <span>Git, Docker, Jenkins CI/CD Pipelines, Maven</span>
-                    </div>
-                    <div class="cv-skill-line">
-                        <strong>Architecture & Design:</strong>
-                        <span>Microservices Architecture, Event-Driven Architecture, SOLID Principles, Design Patterns</span>
-                    </div>
-                    <div class="cv-skill-line">
-                        <strong>Cloud:</strong>
-                        <span>Microsoft Azure (AZ-900 Certified)</span>
+                </div>
+
+                <div class="cv-skills-subgroup" style="margin-top: 4px;">
+                    <div class="cv-skills-subtitle">Additional Technical Knowledge (Ongoing Self-Study & Hands-On Practice)</div>
+                    <div class="cv-skills-grid">
+                        <div class="cv-skill-line">
+                            <strong>Distributed Systems & Design:</strong>
+                            <span>Apache Kafka, Elasticsearch, Redis, Microservices Architecture, Distributed Systems Concepts, High-Level Design (HLD) & Low-Level Design (LLD)</span>
+                        </div>
                     </div>
                 </div>
 
@@ -426,7 +471,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                 </div>
 
                 <div class="cv-sheet-footer">
-                    <span>${DATA.profile.name} — Senior Backend Software Engineer</span>
+                    <span>${DATA.profile.name} — Senior Java Backend Developer</span>
                     <span>Page 1 of 2</span>
                 </div>
             </section>
@@ -446,7 +491,6 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </div>
                     <ul class="cv-job-bullets">
                         ${accAnalyst.details.map(d => `<li>${d}</li>`).join('')}
-                        <li>Integrated third-party carrier tracking webhooks and asynchronous status notification handlers to ensure reliable end-to-end shipment visibility.</li>
                     </ul>
                 </div>
 
@@ -460,34 +504,66 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </div>
                     <ul class="cv-job-bullets">
                         ${accAssociate.details.map(d => `<li>${d}</li>`).join('')}
-                        <li>Authored data migration utilities and SQL batch scripts to support database transformation tasks across client staging environments.</li>
                     </ul>
                 </div>
 
-                <!-- Technical Leadership & Engineering Practices -->
-                <div class="cv-sec-title">Technical Ownership & Engineering Practices</div>
-                <ul class="cv-leadership-bullets" style="margin-bottom: 9px;">
-                    <li><strong>Code Craftsmanship & Standards:</strong> Conducted comprehensive Low-Level Design (LLD) reviews and peer pull-request evaluations, enforcing clean architecture, SOLID design principles, and automated SonarQube quality gates across releases.</li>
-                    <li><strong>Engineering Mentorship & Onboarding:</strong> Mentored junior and mid-level software engineers on Java concurrency best practices, Spring Boot service decomposition, unit test writing with JUnit/Mockito, and defensive coding techniques.</li>
-                    <li><strong>API Design & Contract Governance:</strong> Collaborated closely with frontend engineers, product managers, and QA teams to establish standardized RESTful API contracts, predictable error response payloads, and pagination models across microservices.</li>
-                    <li><strong>Production Reliability & Incident Management:</strong> Participated in on-call engineering rotations, triaged high-priority production defects, and conducted blameless Root Cause Analysis (RCA) meetings to implement preventative engineering measures.</li>
-                </ul>
+                <!-- Selected Hands-On Projects -->
+                <div class="cv-sec-title">Selected Hands-On Projects</div>
+
+                <div class="cv-project-item">
+                    <div class="cv-project-header">
+                        <div>
+                            <span class="cv-project-name">Parking Lot System</span>
+                            <span class="cv-project-tech">| Java, Spring Boot, REST APIs, Object-Oriented Design</span>
+                        </div>
+                        <a href="https://github.com/sfarera" target="_blank" class="cv-project-link">github.com/sfarera</a>
+                    </div>
+                    <ul class="cv-project-bullets">
+                        <li>Implemented low-level object-oriented design applying Creational and Behavioral design patterns (Factory, Strategy) to manage parking spots, vehicle types, and dynamic fee calculation strategies.</li>
+                        <li>Developed REST APIs to handle parking ticket issuance, vehicle check-in/checkout workflows, and real-time slot availability tracking.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-project-item">
+                    <div class="cv-project-header">
+                        <div>
+                            <span class="cv-project-name">Movie Ticket Booking System</span>
+                            <span class="cv-project-tech">| Java, Spring Boot, JPA, Transaction Management</span>
+                        </div>
+                        <a href="https://github.com/sfarera" target="_blank" class="cv-project-link">github.com/sfarera</a>
+                    </div>
+                    <ul class="cv-project-bullets">
+                        <li>Engineered a booking service with relational data modeling, handling concurrent seat reservations, show scheduling, and pricing tiers.</li>
+                        <li>Utilized Spring transaction management (@Transactional) and database locking mechanisms to prevent double-booking and maintain transactional integrity.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-project-item">
+                    <div class="cv-project-header">
+                        <div>
+                            <span class="cv-project-name">Expense Sharing Application</span>
+                            <span class="cv-project-tech">| Java, Spring Boot, Object-Oriented Design</span>
+                        </div>
+                        <a href="https://github.com/sfarera" target="_blank" class="cv-project-link">github.com/sfarera</a>
+                    </div>
+                    <ul class="cv-project-bullets">
+                        <li>Modeled split-expense domain logic supporting multiple split strategies (equal, exact amounts, percentage) among user groups.</li>
+                        <li>Exposed RESTful endpoints for group management, expense creation, and calculating consolidated balances to minimize settlement transactions.</li>
+                    </ul>
+                </div>
 
                 <!-- Education -->
                 <div class="cv-sec-title">Education</div>
-                <div class="cv-item-block" style="margin-bottom: 9px;">
+                <div class="cv-item-block">
                     <div class="cv-item-row">
                         <div>
                             <span class="cv-item-title">Bachelor of Engineering (B.E.) in Information Technology</span><br>
-                            <span class="cv-item-inst">Shri Govindram Seksaria Institute of Technology and Science (SGSITS Indore, MP)</span>
+                            <span class="cv-item-inst">Shri Govindram Seksaria Institute of Technology and Science (SGSITS Indore)</span>
                         </div>
                         <div style="text-align: right;">
                             <span class="cv-item-date">2013 – 2017</span><br>
                             <span style="font-size: 0.77rem; font-weight: 600; color: var(--primary);">CGPA: 7.1 / 10.0</span>
                         </div>
-                    </div>
-                    <div class="cv-item-details" style="margin-top: 3px;">
-                        <strong>Key Academic Foundations:</strong> Data Structures & Algorithms, Object-Oriented Analysis & Design (OOAD), Database Management Systems (DBMS), Operating Systems, Computer Networks, Software Engineering.
                     </div>
                 </div>
 
@@ -497,17 +573,14 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     <div class="cv-item-row">
                         <div>
                             <span class="cv-item-title">Microsoft Certified: Azure Fundamentals (AZ-900)</span><br>
-                            <span class="cv-item-inst">Microsoft • Cloud Concepts, Azure Architecture, Security, Governance & Compliance</span>
+                            <span class="cv-item-inst">Microsoft • Cloud Concepts, Azure Architecture, Security & Governance</span>
                         </div>
                         <span class="cv-item-date">Certified, 2023</span>
-                    </div>
-                    <div class="cv-item-details" style="margin-top: 2px;">
-                        Verified foundational proficiency in Cloud Architecture, Azure Core Services (Compute, Storage, Networking), Identity, and Security.
                     </div>
                 </div>
 
                 <div class="cv-sheet-footer">
-                    <span>${DATA.profile.name} — Senior Backend Software Engineer</span>
+                    <span>${DATA.profile.name} — Senior Java Backend Developer</span>
                     <span>Page 2 of 2</span>
                 </div>
             </section>

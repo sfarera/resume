@@ -1,40 +1,42 @@
 {
+  "projects": [
+    {
+      "name": "Parking Lot System",
+      "tech": "Java, Spring Boot, REST APIs, Object-Oriented Design",
+      "link": "https://github.com/sfarera",
+      "bullets": [
+        "Implemented low-level object-oriented design applying Creational and Behavioral design patterns (Factory, Strategy) to manage parking spots, vehicle types, and dynamic fee calculation strategies.",
+        "Developed REST APIs to handle parking ticket issuance, vehicle check-in/checkout workflows, and real-time slot availability tracking."
+      ]
+    },
+    {
+      "name": "Movie Ticket Booking System",
+      "tech": "Java, Spring Boot, JPA, Transaction Management",
+      "link": "https://github.com/sfarera",
+      "bullets": [
+        "Engineered a booking service with relational data modeling, handling concurrent seat reservations, show scheduling, and pricing tiers.",
+        "Utilized Spring transaction management (@Transactional) and database locking mechanisms to prevent double-booking and maintain transactional integrity."
+      ]
+    },
+    {
+      "name": "Expense Sharing Application",
+      "tech": "Java, Spring Boot, Object-Oriented Design",
+      "link": "https://github.com/sfarera",
+      "bullets": [
+        "Modeled split-expense domain logic supporting multiple split strategies (equal, exact amounts, percentage) among user groups.",
+        "Exposed RESTful endpoints for group management, expense creation, and calculating consolidated balances to minimize settlement transactions."
+      ]
+    }
+  ],
   "scope": [
-    "8.5+ years of experience architecting, designing, and delivering high-throughput, fault-tolerant distributed backend systems.",
-    "Proven SDE-2/SDE-3 level expertise in High-Level Design (HLD), Low-Level Design (LLD), Data Structures & Algorithms, and clean architecture.",
-    "Designed and scaled event-driven architectures with Apache Kafka, processing 10M+ daily transactions with 99.99% uptime.",
-    "Spearheaded distributed transaction management with the Saga pattern and Transactional Outbox pattern across microservices.",
-    "Enforced rigorous code craftsmanship: SOLID principles, GoF design patterns, CodeQL static analysis, and SonarQube quality gates.",
-    "Represented institute at National Level Table Tennis tournament and captained state-level CBSE Football team."
-  ],
-  "architecture": [
-    "Architected distributed event-driven microservices utilizing Apache Kafka for asynchronous communication, pub-sub messaging, and high throughput.",
-    "Implemented the Saga Pattern (Orchestration & Choreography) and Outbox Pattern to maintain data consistency in distributed transactions.",
-    "Engineered robust Low-Level Designs (LLD) strictly adhering to SOLID principles, Design Patterns (Factory, Strategy, Observer, Decorator, State), and clean code.",
-    "Designed resilient data tiers incorporating Master-Slave read replication, database sharding/partitioning, and Consistent Hashing.",
-    "Integrated Elasticsearch clusters for high-performance distributed search, custom indexing, and typeahead lookups, reducing p99 latency to <150ms.",
-    "Applied distributed systems fundamentals including CAP and PACELC theorems, ZooKeeper coordination, and multi-tier Redis caching."
-  ],
-  "platforms": [
-    "Distributed Event-Driven Insurance Platform: High-throughput Spring Boot microservices backed by Apache Kafka and the Saga pattern, handling 10M+ daily events with 99.99% availability.",
-    "Elasticsearch Search & Indexing Engine: Low-latency policy and member search with custom analyzers and typeahead lookup, slashing query response times by 65%.",
-    "Asset Rebalancing & Investment Platform: Real-time portfolio rebalancing engine executing automated allocations for $500M+ in assets under management with idempotent guarantees.",
-    "Logistics Order Lifecycle Engine: High-throughput order tracking and event handling pipeline managing 200K+ daily shipments with zero race conditions.",
-    "Cloud & Security Infrastructure: Microsoft Azure (AZ-900 certified), automated Jenkins CI/CD, CodeQL static analysis, and SonarQube quality gates achieving zero production vulnerabilities."
-  ],
-  "leadership": [
-    "Mentored engineering peers in DSA, LLD, SOLID design principles, clean architecture, and system design patterns.",
-    "Led technical architecture reviews and design doc walkthroughs for critical microservices and data pipelines.",
-    "Championed high engineering standards, comprehensive test coverage (JUnit/Mockito), and automated security scanning."
-  ],
-  "collaboration": [
-    "Partnered with System Architects, Product Managers, and cross-functional teams to define scalable distributed system architectures.",
-    "Collaborated with DevOps and Frontend teams on REST contracts, API gateways, and CI/CD automation pipelines.",
-    "Actively drove Agile ceremonies including backlog grooming, technical spike estimations, and sprint retrospectives."
+    "8+ years of professional backend software development using Java, Spring Boot, REST APIs, and relational databases.",
+    "Strong foundation in Object-Oriented Programming (OOP), Data Structures, Algorithms, and Low-Level Design (LLD).",
+    "Hands-on expertise in building RESTful web services, database persistence with JPA/Hibernate, and automated testing with JUnit/Mockito.",
+    "Ongoing hands-on practice in distributed systems concepts, microservices architecture, and system design."
   ],
   "careerFocus": [
-    "Senior Software Engineer (SDE-3) / Senior Backend Engineer",
-    "Distributed Systems & Cloud-Native Backend Architect",
-    "High-Scale Microservices & Core Platform Engineering"
+    "Senior Java Backend Developer",
+    "Senior Software Engineer / SDE-3",
+    "Backend Systems & Microservices Engineering"
   ]
 }
