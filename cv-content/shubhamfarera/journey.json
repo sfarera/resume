@@ -4,13 +4,12 @@
     "company": "Tata Consultancy Services",
     "date": "Oct 2023 – Present",
     "details": [
-      "Architected and deployed scalable, event-driven microservices using Java 17, Spring Boot, and Apache Kafka, processing 10M+ daily events for healthcare claims and policy workflows with 99.99% availability.",
-      "Implemented distributed transaction workflows across billing and policy underwriting services using the Saga Pattern (Orchestration & Choreography) and Outbox Pattern, guaranteeing eventual consistency across heterogeneous datastores without 2PC overhead.",
-      "Engineered low-latency search and retrieval pipelines using Elasticsearch, designing custom analyzer mappings and typeahead query DSLs that reduced p99 search latency by 65% (from 450ms to <150ms).",
-      "Refactored legacy monolithic services into modular, extensible microservices adhering to SOLID principles and GoF design patterns (Strategy, Factory, Observer, Decorator), increasing unit test coverage from 45% to 88% using JUnit and Mockito.",
-      "Scaled database architecture by implementing MySQL/Oracle Master-Slave read replication and horizontal table partitioning, paired with multi-tier Redis distributed caching, reducing database read contention by 55%.",
-      "Engineered system resilience and fault tolerance utilizing Resilience4j circuit breakers, token-bucket rate limiting, and graceful degradation, applying CAP and PACELC trade-offs to withstand high-volume traffic surges.",
-      "Streamlined CI/CD deployment automation using Jenkins pipelines, enforcing automated CodeQL static analysis and SonarQube quality gates to maintain 0 critical/high vulnerabilities in production."
+      "Developed Java 17 and Spring Boot microservices supporting healthcare claims processing and policy underwriting workflows, ensuring high system availability and reliable error recovery.",
+      "Developed Kafka producers and consumers for asynchronous communication between backend services, implementing schema validation, message serialization, and dead-letter queue error handling.",
+      "Contributed to distributed workflow implementation across billing and policy services using Kafka event-driven messaging and compensatory retry handling.",
+      "Optimized Elasticsearch queries, index mappings, and analyzer configurations for policy lookup, improving search response times from ~450ms to sub-150ms.",
+      "Optimized relational database queries, table indexing, and supported MySQL/Oracle primary-replica configurations with Redis caching to reduce query latency and database load.",
+      "Integrated Jenkins CI/CD deployment pipelines with automated CodeQL static analysis and SonarQube quality gates to enforce code quality standards and prevent defect escapes."
     ]
   },
   {
@@ -18,9 +17,10 @@
     "company": "Accenture",
     "date": "Sept 2021 – Aug 2023",
     "details": [
-      "Singapore Wealth & Asset Management System: Architected backend microservices for automated portfolio rebalancing workflows, executing real-time asset allocation calculations for $500M+ in assets under management (AUM).",
-      "Engineered secure, idempotent RESTful APIs integrating with third-party banking gateways and financial settlement networks, reducing API transaction failure rates by 40%.",
-      "Optimized complex SQL queries, transaction boundaries, and Hibernate ORM configurations, improving end-of-day batch settlement execution time by 35%."
+      "Developed backend RESTful microservices for automated portfolio rebalancing workflows within a wealth management platform supporting over $500M in assets under management (AUM).",
+      "Engineered secure, idempotent REST APIs to integrate internal portfolio workflows with external banking gateways and third-party financial settlement networks.",
+      "Optimized Spring Data JPA queries, database indexing, and Hibernate configurations for end-of-day batch settlement processing, reducing execution times by ~35%.",
+      "Mentored junior engineers through technical design discussions and peer code reviews, helping improve code quality and maintainability."
     ]
   },
   {
@@ -28,8 +28,9 @@
     "company": "Accenture",
     "date": "May 2020 – Aug 2021",
     "details": [
-      "Australia Logistics & Order Management: Designed and developed core order processing and shipment tracking REST APIs using Java, Spring Boot, and JPA, handling 200K+ daily orders.",
-      "Applied State and Strategy design patterns to manage multi-stage order lifecycles; optimized database indexing and HikariCP connection pools, reducing API response times by 30% during peak windows."
+      "Developed backend REST APIs using Java, Spring Boot, and Spring Data JPA for an order processing and shipment tracking platform handling up to 200K+ daily orders.",
+      "Implemented State and Strategy design patterns to manage multi-stage shipment lifecycles, ensuring clean status transitions and business rule validation.",
+      "Optimized database queries and HikariCP connection pool configurations, reducing API latency during peak shipment processing windows."
     ]
   },
   {
@@ -37,8 +38,9 @@
     "company": "Accenture",
     "date": "Feb 2018 – Apr 2020",
     "details": [
-      "US Healthcare & Enterprise Case Management: Developed core Java modules, data transformation utilities, and scheduled batch jobs supporting critical public assistance workflows.",
-      "Authored robust unit and integration test suites using JUnit and Mockito (85%+ code coverage); resolved client-reported defect tickets ahead of strict SLA deadlines."
+      "Developed core Java application modules, data transformation utilities, and scheduled batch jobs supporting public assistance case management systems.",
+      "Authored automated unit and integration tests using JUnit and Mockito, ensuring reliable test coverage and resolving production defect tickets ahead of SLA deadlines.",
+      "Collaborated with cross-functional teams in an Agile environment to participate in sprint planning, backlog grooming, and root cause analysis (RCA) for client-reported issues."
     ]
   }
 ]

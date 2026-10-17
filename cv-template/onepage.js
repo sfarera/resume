@@ -3,25 +3,24 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         :root {
             --primary: #0f172a;
             --primary-dark: #020617;
-            --accent: #1d4ed8;
-            --accent-light: #2563eb;
-            --accent-bg: #eff6ff;
+            --accent: #1e40af;
+            --accent-subtle: #2563eb;
             --text-dark: #0f172a;
-            --text-body: #334155;
-            --text-muted: #64748b;
+            --text-body: #1e293b;
+            --text-muted: #475569;
             --border: #cbd5e1;
             --border-light: #e2e8f0;
             --bg-page: #ffffff;
-            --bg-canvas: #e2e8f0;
+            --bg-canvas: #f1f5f9;
         }
 
         body {
             background-color: var(--bg-canvas);
             color: var(--text-body);
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 1.5rem 0;
-            line-height: 1.34;
+            line-height: 1.36;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -36,10 +35,10 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             width: 210mm;
             min-height: 297mm;
             max-height: 297mm;
-            padding: 8mm 12mm 7mm 12mm;
+            padding: 10mm 15mm 8mm 15mm;
             box-sizing: border-box;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 2px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -47,156 +46,124 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             overflow: hidden;
         }
 
-        /* Header */
+        /* ATS Header - Clean Single Column */
         .cv-header-onepage {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 5px;
-            margin-bottom: 5px;
+            text-align: center;
+            border-bottom: 1.5px solid var(--primary);
+            padding-bottom: 6px;
+            margin-bottom: 8px;
         }
 
-        .cv-header-text h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.62rem;
+        .cv-header-onepage h1 {
+            font-size: 1.60rem;
             font-weight: 700;
             color: var(--primary);
-            margin: 0 0 1px 0;
-            letter-spacing: -0.5px;
-            line-height: 1.1;
+            margin: 0 0 2px 0;
+            letter-spacing: -0.3px;
+            line-height: 1.15;
+            text-transform: uppercase;
         }
 
-        .cv-header-text .cv-title {
+        .cv-header-onepage .cv-headline {
             font-size: 0.85rem;
             font-weight: 600;
             color: var(--accent);
-            margin: 0 0 4px 0;
+            margin: 0 0 5px 0;
             letter-spacing: 0.1px;
         }
 
         .cv-contact-bar {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 3px 13px;
-            font-size: 0.74rem;
-            color: var(--text-body);
+            gap: 4px 14px;
+            font-size: 0.76rem;
+            color: var(--text-muted);
         }
 
         .cv-contact-bar a {
             color: var(--text-body);
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
             font-weight: 500;
         }
 
         .cv-contact-bar a:hover {
             color: var(--accent);
+            text-decoration: underline;
         }
 
-        .cv-avatar-onepage {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--accent);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        .cv-contact-sep {
+            color: var(--border);
+            user-select: none;
         }
 
-        /* Section Headings */
+        /* Standard ATS Headings */
         .cv-sec-title-onepage {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.81rem;
+            font-size: 0.82rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin: 5px 0 3px 0;
-            padding-bottom: 1.5px;
-            border-bottom: 1.4px solid var(--accent);
-        }
-
-        .cv-sec-title-onepage i {
-            color: var(--accent);
-            font-size: 0.76rem;
+            letter-spacing: 0.8px;
+            margin: 8px 0 4px 0;
+            padding-bottom: 2px;
+            border-bottom: 1.2px solid var(--border);
         }
 
         /* Summary */
         .cv-summary-onepage {
-            font-size: 0.75rem;
+            font-size: 0.76rem;
             color: var(--text-body);
-            margin: 0 0 3px 0;
+            margin: 0 0 5px 0;
+            line-height: 1.38;
             text-align: justify;
-            line-height: 1.30;
         }
 
-        /* Grouped Skills Table */
-        .cv-skills-table-onepage {
+        /* Skills */
+        .cv-skills-grid-onepage {
             display: flex;
             flex-direction: column;
-            gap: 2px;
-            margin-bottom: 4px;
-            font-size: 0.73rem;
+            gap: 2.5px;
+            margin-bottom: 6px;
+            font-size: 0.75rem;
         }
 
-        .cv-skill-row-onepage {
-            display: grid;
-            grid-template-columns: 130px 1fr;
-            align-items: baseline;
-            gap: 6px;
-            padding: 0;
+        .cv-skill-line-onepage {
+            line-height: 1.34;
         }
 
-        .cv-skill-label-onepage {
-            font-weight: 700;
+        .cv-skill-line-onepage strong {
             color: var(--primary);
-            font-size: 0.72rem;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
-
-        .cv-skill-label-onepage::after {
-            content: ':';
-        }
-
-        .cv-skill-values-onepage {
-            color: var(--text-body);
-            line-height: 1.28;
+            font-weight: 700;
+            display: inline-block;
+            min-width: 155px;
         }
 
         /* Job Entry */
         .cv-job-onepage {
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .cv-job-header-onepage {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 1.5px;
+            margin-bottom: 2.5px;
         }
 
         .cv-job-role-onepage {
-            font-size: 0.81rem;
+            font-size: 0.82rem;
             font-weight: 700;
             color: var(--primary);
         }
 
         .cv-job-company-onepage {
-            color: var(--accent);
+            color: var(--text-body);
             font-weight: 600;
-            font-size: 0.80rem;
-            margin-left: 3px;
+            font-size: 0.81rem;
         }
 
         .cv-job-date-onepage {
-            font-size: 0.72rem;
+            font-size: 0.74rem;
             font-weight: 600;
             color: var(--text-muted);
             white-space: nowrap;
@@ -205,64 +172,48 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         .cv-job-bullets-onepage {
             margin: 0;
             padding-left: 14px;
-            font-size: 0.73rem;
+            font-size: 0.745rem;
             color: var(--text-body);
-            line-height: 1.28;
+            line-height: 1.34;
         }
 
         .cv-job-bullets-onepage li {
-            margin-bottom: 1.5px;
+            margin-bottom: 2.5px;
             text-align: justify;
         }
 
         .cv-job-bullets-onepage li strong {
             color: var(--primary);
+            font-weight: 600;
         }
 
-        /* Bottom 2-Column Grid (Platforms + Education/Distinctions) */
-        .cv-bottom-grid {
+        /* Bottom Grid: Education & Certifications */
+        .cv-bottom-grid-onepage {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 10px;
-            margin-top: 3px;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 14px;
+            margin-top: 4px;
         }
 
-        .cv-platform-mini-card {
-            background: #f8fafc;
-            border-left: 2.5px solid var(--accent);
-            padding: 3px 6px;
-            border-radius: 3px;
-            font-size: 0.71rem;
-            color: var(--text-body);
-            line-height: 1.25;
-            margin-bottom: 3px;
-        }
-
-        .cv-platform-mini-card strong {
-            color: var(--primary);
-            font-size: 0.73rem;
-        }
-
-        .cv-meta-item {
-            font-size: 0.72rem;
-            margin-bottom: 3.5px;
-            line-height: 1.26;
+        .cv-meta-item-onepage {
+            font-size: 0.75rem;
+            line-height: 1.34;
             color: var(--text-body);
         }
 
-        .cv-meta-item strong {
+        .cv-meta-item-onepage strong {
             color: var(--primary);
         }
 
         /* Sheet Footer */
         .cv-sheet-footer-onepage {
             margin-top: auto;
-            padding-top: 3px;
+            padding-top: 4px;
             border-top: 1px solid var(--border-light);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.66rem;
+            font-size: 0.67rem;
             color: var(--text-muted);
         }
 
@@ -270,7 +221,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         @media print {
             @page {
                 size: A4 portrait;
-                margin: 5mm 8mm 4mm 8mm !important;
+                margin: 0 !important;
             }
 
             html, body {
@@ -290,16 +241,14 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 gap: 0 !important;
                 display: block !important;
                 width: 100% !important;
-                height: 100% !important;
             }
 
             .cv-sheet-onepage {
-                width: 100% !important;
-                max-width: 100% !important;
-                height: 100% !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                min-height: 297mm !important;
                 max-height: 297mm !important;
-                min-height: 0 !important;
-                padding: 0 !important;
+                padding: 10mm 15mm 8mm 15mm !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 border: none !important;
@@ -317,77 +266,73 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         }
     `;
 
+    const tcsJob = DATA.journey[0]; // TCS
+    const accSrAnalyst = DATA.journey[1]; // Accenture Sr Analyst (Sept 2021 - Aug 2023)
+    const accAnalyst = DATA.journey[2]; // Accenture Analyst (May 2020 - Aug 2021)
+    const accAssociate = DATA.journey[3]; // Accenture Associate (Feb 2018 - Apr 2020)
+
     const githubSocial = DATA.profile.social.find(s => s.platform.toLowerCase().includes('github'));
     const linkedinSocial = DATA.profile.social.find(s => s.platform.toLowerCase().includes('linkedin'));
 
     ROOT.innerHTML = `
         <div class="cv-wrapper">
-            <section class="cv-sheet-onepage" id="page-1">
-                <!-- Header -->
+            <section class="cv-sheet-onepage">
                 <header class="cv-header-onepage">
-                    <div class="cv-header-text">
-                        <h1>${DATA.profile.name}</h1>
-                        <div class="cv-title">${DATA.profile.taglines.join(' &nbsp;•&nbsp; ')}</div>
-                        <div class="cv-contact-bar">
-                            <span><i class="fas fa-map-marker-alt"></i> ${DATA.profile.contact.location}</span>
-                            <span><i class="fas fa-phone"></i> ${DATA.profile.contact.phone}</span>
-                            <a href="mailto:${DATA.profile.contact.email}"><i class="fas fa-envelope"></i> ${DATA.profile.contact.email}</a>
-                            ${linkedinSocial ? `<a href="${linkedinSocial.url}" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>` : ''}
-                            ${githubSocial ? `<a href="${githubSocial.url}" target="_blank"><i class="fab fa-github"></i> GitHub</a>` : ''}
-                        </div>
+                    <h1>${DATA.profile.name}</h1>
+                    <div class="cv-headline">Senior Backend Software Engineer | Java | Spring Boot | Microservices | Distributed Systems</div>
+                    <div class="cv-contact-bar">
+                        <span>${DATA.profile.contact.location}</span>
+                        <span class="cv-contact-sep">•</span>
+                        <span>${DATA.profile.contact.phone}</span>
+                        <span class="cv-contact-sep">•</span>
+                        <a href="mailto:${DATA.profile.contact.email}">${DATA.profile.contact.email}</a>
+                        ${linkedinSocial ? `<span class="cv-contact-sep">•</span><a href="${linkedinSocial.url}" target="_blank">LinkedIn</a>` : ''}
+                        ${githubSocial ? `<span class="cv-contact-sep">•</span><a href="${githubSocial.url}" target="_blank">GitHub</a>` : ''}
                     </div>
-                    <img src="${DATA.profile.profilePic}" alt="${DATA.profile.name}" class="cv-avatar-onepage">
                 </header>
 
                 <!-- Professional Summary -->
-                <div class="cv-sec-title-onepage"><i class="fas fa-user-check"></i> Executive Professional Summary</div>
-                <p class="cv-summary-onepage">
-                    Senior Software Engineer with <strong>8.5+ years of experience</strong> architecting high-throughput, fault-tolerant distributed systems and enterprise microservices. Specialist in event-driven architectures with <strong>Apache Kafka (10M+ daily events)</strong>, distributed transaction workflows via <strong>Saga (Orchestration & Choreography) & Outbox patterns</strong>, low-latency search with <strong>Elasticsearch (<150ms p99 latency)</strong>, and database scaling via MySQL/Oracle read replication & multi-tier Redis caching across Healthcare, FinTech, and Logistics.
-                </p>
+                <div class="cv-sec-title-onepage">Professional Summary</div>
+                <p class="cv-summary-onepage">${DATA.summary.summary[0]}</p>
 
-                <!-- Grouped Technical Expertise -->
-                <div class="cv-sec-title-onepage"><i class="fas fa-layer-group"></i> Technical Competencies & Architecture</div>
-                <div class="cv-skills-table-onepage">
-                    <div class="cv-skill-row-onepage">
-                        <span class="cv-skill-label-onepage"><i class="fas fa-code"></i> Languages & Core</span>
-                        <span class="cv-skill-values-onepage"><strong>Java (8 / 11 / 17)</strong>, Data Structures & Algorithms (DSA), Object-Oriented Analysis & Design (OOAD), Multithreading & Concurrency.</span>
+                <!-- Technical Skills -->
+                <div class="cv-sec-title-onepage">Technical Skills</div>
+                <div class="cv-skills-grid-onepage">
+                    <div class="cv-skill-line-onepage">
+                        <strong>Languages & Backend:</strong>
+                        <span>Java (8 / 11 / 17), SQL, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs</span>
                     </div>
-                    <div class="cv-skill-row-onepage">
-                        <span class="cv-skill-label-onepage"><i class="fas fa-network-wired"></i> Distributed Systems</span>
-                        <span class="cv-skill-values-onepage"><strong>Apache Kafka</strong>, Saga Pattern (Orchestration & Choreography), Transactional Outbox, <strong>Elasticsearch</strong>, Redis Caching, Consistent Hashing, CAP & PACELC Theorems.</span>
+                    <div class="cv-skill-line-onepage">
+                        <strong>Messaging & Databases:</strong>
+                        <span>Apache Kafka, MySQL, Oracle, Elasticsearch, Redis</span>
                     </div>
-                    <div class="cv-skill-row-onepage">
-                        <span class="cv-skill-label-onepage"><i class="fas fa-cubes"></i> Architecture & LLD</span>
-                        <span class="cv-skill-values-onepage"><strong>Microservices Architecture</strong>, High-Level Design (HLD), Low-Level Design (LLD), <strong>SOLID Principles</strong>, GoF Design Patterns (Strategy, Factory, Observer, State), Clean Architecture.</span>
+                    <div class="cv-skill-line-onepage">
+                        <strong>Testing & DevOps:</strong>
+                        <span>JUnit, Mockito, SonarQube, CodeQL, Git, Docker, Jenkins CI/CD, Maven</span>
                     </div>
-                    <div class="cv-skill-row-onepage">
-                        <span class="cv-skill-label-onepage"><i class="fas fa-database"></i> Frameworks & DB</span>
-                        <span class="cv-skill-values-onepage"><strong>Spring Boot</strong>, Spring Cloud, Hibernate / JPA, RESTful APIs, <strong>MySQL</strong>, <strong>Oracle</strong>, PostgreSQL, Database Sharding & Master-Slave Replication.</span>
-                    </div>
-                    <div class="cv-skill-row-onepage">
-                        <span class="cv-skill-label-onepage"><i class="fas fa-cloud"></i> Cloud & DevOps</span>
-                        <span class="cv-skill-values-onepage"><strong>Microsoft Azure (AZ-900 Certified)</strong>, Docker, CI/CD (Jenkins), CodeQL Static Analysis, SonarQube Quality Gates, Git, JUnit, Mockito, Agile / Scrum.</span>
+                    <div class="cv-skill-line-onepage">
+                        <strong>Architecture & Cloud:</strong>
+                        <span>Microservices Architecture, Event-Driven Architecture, SOLID Principles, Azure (AZ-900)</span>
                     </div>
                 </div>
 
                 <!-- Professional Experience -->
-                <div class="cv-sec-title-onepage"><i class="fas fa-briefcase"></i> Professional Experience</div>
+                <div class="cv-sec-title-onepage">Professional Experience</div>
 
-                <!-- Current Role: TCS -->
+                <!-- TCS -->
                 <div class="cv-job-onepage">
                     <div class="cv-job-header-onepage">
                         <div>
-                            <span class="cv-job-role-onepage">IT Analyst (Senior Backend Engineer)</span>
-                            <span class="cv-job-company-onepage">@ Tata Consultancy Services</span>
+                            <span class="cv-job-role-onepage">${tcsJob.role}</span> — <span class="cv-job-company-onepage">${tcsJob.company}</span>
                         </div>
-                        <span class="cv-job-date-onepage"><i class="far fa-calendar-alt"></i> Oct 2023 – Present</span>
+                        <span class="cv-job-date-onepage">${tcsJob.date}</span>
                     </div>
                     <ul class="cv-job-bullets-onepage">
-                        <li>Architected event-driven microservices using <strong>Java 17, Spring Boot, and Apache Kafka</strong>, processing <strong>10M+ daily events</strong> for healthcare claims workflows with 99.99% availability.</li>
-                        <li>Implemented distributed transactions across billing & policy underwriting services using the <strong>Saga Pattern & Outbox Pattern</strong>, guaranteeing eventual consistency without 2PC overhead.</li>
-                        <li>Engineered search retrieval pipelines using <strong>Elasticsearch</strong> with custom analyzer mappings, reducing p99 latency by <strong>65% (from 450ms to <150ms)</strong>.</li>
-                        <li>Scaled database architecture with MySQL/Oracle <strong>Master-Slave read replication</strong> and multi-tier <strong>Redis caching</strong>, reducing database read contention by <strong>55%</strong>.</li>
-                        <li>Refactored legacy monolith into extensible microservices applying <strong>SOLID principles</strong> and GoF patterns; increased JUnit/Mockito test coverage from 45% to <strong>88%</strong>.</li>
+                        <li>Developed Java 17 and Spring Boot microservices supporting healthcare claims processing and policy underwriting workflows with high availability.</li>
+                        <li>Implemented Kafka producers and consumers for asynchronous service communication with schema validation, serialization, and error recovery.</li>
+                        <li>Contributed to distributed workflow implementation across billing and policy services using Kafka event-driven messaging and retry handling.</li>
+                        <li>Optimized Elasticsearch queries, index mappings, and analyzer configurations for policy lookup, improving response times from ~450ms to sub-150ms.</li>
+                        <li>Optimized relational database queries, table indexing, and supported MySQL/Oracle primary-replica configurations with Redis caching.</li>
                     </ul>
                 </div>
 
@@ -395,14 +340,14 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 <div class="cv-job-onepage">
                     <div class="cv-job-header-onepage">
                         <div>
-                            <span class="cv-job-role-onepage">Application Development Senior Analyst</span>
-                            <span class="cv-job-company-onepage">@ Accenture</span>
+                            <span class="cv-job-role-onepage">${accSrAnalyst.role}</span> — <span class="cv-job-company-onepage">${accSrAnalyst.company}</span>
                         </div>
-                        <span class="cv-job-date-onepage"><i class="far fa-calendar-alt"></i> Sept 2021 – Aug 2023</span>
+                        <span class="cv-job-date-onepage">${accSrAnalyst.date}</span>
                     </div>
                     <ul class="cv-job-bullets-onepage">
-                        <li><strong>Singapore Wealth & Asset Management:</strong> Architected backend microservices for automated portfolio rebalancing workflows, executing real-time allocation calculations for <strong>$500M+ in AUM</strong>.</li>
-                        <li>Engineered idempotent RESTful APIs with financial settlement networks, reducing API failure rates by <strong>40%</strong>; optimized SQL queries and Hibernate ORM, improving batch settlement by <strong>35%</strong>.</li>
+                        <li>Developed backend RESTful microservices for automated portfolio rebalancing within a wealth management platform supporting $500M+ in AUM.</li>
+                        <li>Engineered secure, idempotent REST APIs to integrate internal workflows with external banking gateways and financial settlement networks.</li>
+                        <li>Optimized Spring Data JPA queries and database indexing for batch settlement processing, reducing execution times by ~35%.</li>
                     </ul>
                 </div>
 
@@ -410,55 +355,37 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 <div class="cv-job-onepage">
                     <div class="cv-job-header-onepage">
                         <div>
-                            <span class="cv-job-role-onepage">Software Engineer Progression (Analyst & Associate)</span>
-                            <span class="cv-job-company-onepage">@ Accenture</span>
+                            <span class="cv-job-role-onepage">Software Engineer Progression (Analyst & Associate)</span> — <span class="cv-job-company-onepage">Accenture</span>
                         </div>
-                        <span class="cv-job-date-onepage"><i class="far fa-calendar-alt"></i> Feb 2018 – Aug 2021</span>
+                        <span class="cv-job-date-onepage">Feb 2018 – Aug 2021</span>
                     </div>
                     <ul class="cv-job-bullets-onepage">
-                        <li><strong>Australia Logistics Platform:</strong> Developed order tracking REST APIs (Java, Spring Boot, JPA) handling <strong>200K+ daily orders</strong>; applied State/Strategy patterns reducing latency by <strong>30%</strong>.</li>
-                        <li><strong>US Healthcare System:</strong> Developed core Java batch transformation utilities; authored JUnit/Mockito test suites achieving <strong>85%+ code coverage</strong> within Agile sprints.</li>
+                        <li>Developed REST APIs (Java, Spring Boot, JPA) for an order tracking platform handling up to 200K+ daily orders; applied State/Strategy patterns.</li>
+                        <li>Developed core Java batch utilities for public assistance case management; authored JUnit/Mockito test suites achieving reliable coverage.</li>
                     </ul>
                 </div>
 
-                <!-- Bottom 2-Column Section: Platforms & Education/Credentials -->
-                <div class="cv-bottom-grid">
+                <!-- Bottom 2-Column: Education & Certifications -->
+                <div class="cv-bottom-grid-onepage">
                     <div>
-                        <div class="cv-sec-title-onepage"><i class="fas fa-rocket"></i> Key Distributed Platforms</div>
-                        <div class="cv-platform-mini-card">
-                            <strong>Claims Event Platform:</strong> Kafka + Saga microservices handling 10M+ daily events (99.99% uptime).
-                        </div>
-                        <div class="cv-platform-mini-card">
-                            <strong>Elasticsearch Query Engine:</strong> Member search with custom typeahead DSL (&lt;150ms p99 latency).
-                        </div>
-                        <div class="cv-platform-mini-card">
-                            <strong>Asset Rebalancing Engine:</strong> Real-time portfolio calculation pipeline managing $500M+ AUM idempotently.
-                        </div>
-                        <div class="cv-platform-mini-card">
-                            <strong>Logistics Order Engine:</strong> Real-time event pipeline handling 200K+ daily shipments with zero race conditions.
+                        <div class="cv-sec-title-onepage">Education</div>
+                        <div class="cv-meta-item-onepage">
+                            <strong>Bachelor of Engineering (B.E.) in Information Technology</strong><br>
+                            SGSITS Indore (2013 – 2017) | <strong>CGPA: 7.1 / 10.0</strong>
                         </div>
                     </div>
                     <div>
-                        <div class="cv-sec-title-onepage"><i class="fas fa-graduation-cap"></i> Education & Honors</div>
-                        <div class="cv-meta-item">
-                            <strong>B.E. – Information Technology</strong><br>
-                            SGSITS Indore (2013–2017) | <strong>CGPA: 7.1</strong>
-                        </div>
-                        <div class="cv-meta-item">
-                            <strong>Higher Secondary (Class XII, CBSE)</strong>: <strong>87.0%</strong>
-                        </div>
-                        <div class="cv-meta-item">
-                            <strong><i class="fab fa-microsoft" style="color:#00a4ef;"></i> Azure Certified (AZ-900)</strong> | Cloud Architecture
-                        </div>
-                        <div class="cv-meta-item" style="font-size: 0.70rem; color: var(--text-body);">
-                            <strong>Distinctions:</strong> National Table Tennis (BITS Pilani Goa); Captain CBSE Football; NSO AIR 370.
+                        <div class="cv-sec-title-onepage">Certifications</div>
+                        <div class="cv-meta-item-onepage">
+                            <strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong><br>
+                            Microsoft • Certified, 2023
                         </div>
                     </div>
                 </div>
 
                 <!-- Sheet Footer -->
                 <div class="cv-sheet-footer-onepage">
-                    <span>${DATA.profile.name} — Senior Software Engineer (SDE-3)</span>
+                    <span>${DATA.profile.name} — Senior Backend Software Engineer</span>
                     <span>1-Page Executive Resume</span>
                 </div>
             </section>
