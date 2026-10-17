@@ -1,0 +1,30 @@
+{
+  "degrees": [
+    {
+      "degree": "Bachelor of Engineering – Information Technology",
+      "school": "SGSITS Indore (Indore, MP)",
+      "year": "2013 – 2017",
+      "grade": "CGPA 7.1"
+    },
+    {
+      "degree": "12th Standard – PCM",
+      "school": "Vivekanand Vidya Vihar, Maral Sarovar (CBSE)",
+      "year": "2011 – 2012",
+      "grade": "87%"
+    },
+    {
+      "degree": "10th Standard",
+      "school": "Vivekanand Vidya Vihar, Maral Sarovar (CBSE)",
+      "year": "2009 – 2010",
+      "grade": "CGPA 9.0"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Azure Fundamentals AZ-900",
+      "issuer": "Microsoft",
+      "year": "2023",
+      "grade": "Certified"
+    }
+  ]
+}

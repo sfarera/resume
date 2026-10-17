@@ -1,0 +1,44 @@
+[
+  {
+    "role": "IT Analyst (Senior Backend Engineer)",
+    "company": "Tata Consultancy Services",
+    "date": "Oct 2023 – Present",
+    "details": [
+      "Architected and deployed scalable, event-driven microservices using Java 17, Spring Boot, and Apache Kafka, processing 10M+ daily events for healthcare claims and policy workflows with 99.99% availability.",
+      "Implemented distributed transaction workflows across billing and policy underwriting services using the Saga Pattern (Orchestration & Choreography) and Outbox Pattern, guaranteeing eventual consistency across heterogeneous datastores without 2PC overhead.",
+      "Engineered low-latency search and retrieval pipelines using Elasticsearch, designing custom analyzer mappings and typeahead query DSLs that reduced p99 search latency by 65% (from 450ms to <150ms).",
+      "Refactored legacy monolithic services into modular, extensible microservices adhering to SOLID principles and GoF design patterns (Strategy, Factory, Observer, Decorator), increasing unit test coverage from 45% to 88% using JUnit and Mockito.",
+      "Scaled database architecture by implementing MySQL/Oracle Master-Slave read replication and horizontal table partitioning, paired with multi-tier Redis distributed caching, reducing database read contention by 55%.",
+      "Engineered system resilience and fault tolerance utilizing Resilience4j circuit breakers, token-bucket rate limiting, and graceful degradation, applying CAP and PACELC trade-offs to withstand high-volume traffic surges.",
+      "Streamlined CI/CD deployment automation using Jenkins pipelines, enforcing automated CodeQL static analysis and SonarQube quality gates to maintain 0 critical/high vulnerabilities in production."
+    ]
+  },
+  {
+    "role": "Application Development Senior Analyst",
+    "company": "Accenture",
+    "date": "Sept 2021 – Aug 2023",
+    "details": [
+      "Singapore Wealth & Asset Management System: Architected backend microservices for automated portfolio rebalancing workflows, executing real-time asset allocation calculations for $500M+ in assets under management (AUM).",
+      "Engineered secure, idempotent RESTful APIs integrating with third-party banking gateways and financial settlement networks, reducing API transaction failure rates by 40%.",
+      "Optimized complex SQL queries, transaction boundaries, and Hibernate ORM configurations, improving end-of-day batch settlement execution time by 35%."
+    ]
+  },
+  {
+    "role": "Application Development Analyst",
+    "company": "Accenture",
+    "date": "May 2020 – Aug 2021",
+    "details": [
+      "Australia Logistics & Order Management: Designed and developed core order processing and shipment tracking REST APIs using Java, Spring Boot, and JPA, handling 200K+ daily orders.",
+      "Applied State and Strategy design patterns to manage multi-stage order lifecycles; optimized database indexing and HikariCP connection pools, reducing API response times by 30% during peak windows."
+    ]
+  },
+  {
+    "role": "Associate Software Engineer",
+    "company": "Accenture",
+    "date": "Feb 2018 – Apr 2020",
+    "details": [
+      "US Healthcare & Enterprise Case Management: Developed core Java modules, data transformation utilities, and scheduled batch jobs supporting critical public assistance workflows.",
+      "Authored robust unit and integration test suites using JUnit and Mockito (85%+ code coverage); resolved client-reported defect tickets ahead of strict SLA deadlines."
+    ]
+  }
+]

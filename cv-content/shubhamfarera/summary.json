@@ -1,0 +1,6 @@
+{
+  "summary": [
+    "Senior Software Engineer with 8.5+ years of experience architecting, designing, and delivering high-throughput, fault-tolerant distributed systems and enterprise microservices. Deep expertise across High-Level Design (HLD) and Low-Level Design (LLD), applying SOLID principles, GoF design patterns, and clean architecture to scale production systems to 10M+ daily transactions with 99.99% uptime.",
+    "Proven specialist in distributed systems engineering: architecting event-driven pipelines with Apache Kafka, implementing distributed transactions via the Saga Pattern (Orchestration & Choreography) and Outbox Pattern, engineering low-latency search with Elasticsearch, and scaling databases via sharding and master-slave replication. Adept in navigating CAP and PACELC trade-offs to deliver resilient, sub-150ms latency platforms across Healthcare, FinTech, and Logistics."
+  ]
+}
