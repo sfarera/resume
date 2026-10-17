@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Farera — Senior Software Engineer (SDE-3) | Resume</title>
+    <meta name="description" content="Resume of Shubham Farera — Senior Software Engineer (SDE-3) specializing in Distributed Systems, Java 17, Spring Boot, Apache Kafka, Saga Pattern, and Low-Level Design.">
+    <meta property="og:title" content="Shubham Farera — Senior Software Engineer (SDE-3) | Resume">
+    <meta property="og:description" content="8.5+ years experience architecting high-throughput distributed systems, Kafka event streams, and microservices.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Pattern Templates -->
+    <script src="cv-template/twopage.js"></script>
+    <script src="cv-template/split.js"></script>
+    <script src="cv-template/glass.js"></script>
+    <script src="cv-template/clean.js"></script>
+    <script src="cv-template/classic.js"></script>
+
+    <style id="dynamic-style"></style>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        #app-root {
+            min-height: 100vh;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.25rem;
+            color: #64748b;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 6mm 10mm 5mm 10mm !important;
+            }
+
+            html, body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+            }
+
+            #app-root, .cv-wrapper {
+                margin: 0 !important;
+                padding: 0 !important;
+                height: auto !important;
+                overflow: visible !important;
+                display: block !important;
+                gap: 0 !important;
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app-root">
+        <div class="loading"><i class="fas fa-spinner fa-spin" style="margin-right:8px;"></i> Loading Resume...</div>
+    </div>
+
+    <script>
+        const DATA = {};
+        const ROOT = document.getElementById('app-root');
+        const STYLE = document.getElementById('dynamic-style');
+
+        async function loadPreview() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const userId = params.get('user') || 'shubhamfarera';
+                const pattern = params.get('template') || 'twopage';
+                const basePath = `cv-content/${userId}`;
+
+                const [profile, summary, journey, skills, education, highlights] = await Promise.all([
+                    fetch(`${basePath}/profile.json`).then(r => { if (!r.ok) throw new Error('Profile not found'); return r.json(); }),
+                    fetch(`${basePath}/summary.json`).then(r => r.json()),
+                    fetch(`${basePath}/journey.json`).then(r => r.json()),
+                    fetch(`${basePath}/skills.json`).then(r => r.json()),
+                    fetch(`${basePath}/education.json`).then(r => r.json()),
+                    fetch(`${basePath}/highlights.json`).then(r => r.json())
+                ]);
+
+                DATA.profile = profile;
+                DATA.summary = summary;
+                DATA.journey = journey;
+                DATA.skills = skills;
+                DATA.education = education;
+                DATA.highlights = highlights;
+
+                if (pattern === 'twopage' && window.renderTwoPage) window.renderTwoPage(DATA, ROOT, STYLE);
+                else if (pattern === 'split' && window.renderSplit) window.renderSplit(DATA, ROOT, STYLE);
+                else if (pattern === 'glass' && window.renderGlass) window.renderGlass(DATA, ROOT, STYLE);
+                else if (pattern === 'clean' && window.renderClean) window.renderClean(DATA, ROOT, STYLE);
+                else if (pattern === 'classic' && window.renderClassic) window.renderClassic(DATA, ROOT, STYLE);
+                else if (window.renderTwoPage) window.renderTwoPage(DATA, ROOT, STYLE);
+            } catch (e) {
+                console.error(e);
+                ROOT.innerHTML = `<div class='loading' style='color:#ef4444;'>Failed to load resume: ${e.message}</div>`;
+            }
+        }
+
+        loadPreview();
+    </script>
+</body>
+
+</html>

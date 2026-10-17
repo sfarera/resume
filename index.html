@@ -128,6 +128,10 @@
         <button class="pattern-btn" onclick="startRender('clean')">3. Modern Clean</button>
         <button class="pattern-btn" onclick="startRender('classic')">4. Classic Dark</button>
         <div style="height:1px; background:rgba(255,255,255,0.1); margin:8px 0;"></div>
+        <button class="pattern-btn" onclick="openPreview()"
+            style="background: linear-gradient(135deg, #4f46e5, #7c3aed); border-color: #6366f1; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:6px; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);">
+            <i class="fas fa-eye"></i> Recruiter Preview
+        </button>
         <a href="Shubham_Farera_Resume_2Page.pdf" download="Shubham_Farera_Resume_2Page.pdf" class="pattern-btn"
             style="background:#10b981; border-color:#059669; font-weight:bold; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;">
             <i class="fas fa-file-pdf"></i> Download PDF
@@ -136,8 +140,12 @@
             style="background:var(--accent); border-color:var(--accent); font-weight:bold; display:flex; align-items:center; justify-content:center; gap:6px;">
             <i class="fas fa-print"></i> Print / Save PDF
         </button>
+        <button class="pattern-btn" onclick="copyPreviewLink()" id="copy-btn"
+            style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.15); text-align:center; font-size:0.8rem; color:#cbd5e1; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <i class="fas fa-link"></i> Copy Recruiter Link
+        </button>
         <a href="profiles.html" class="pattern-btn"
-            style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1); text-align:center; text-decoration:none; font-size:0.8rem; color:#94a3b8; display:flex; align-items:center; justify-content:center; gap:6px;">
+            style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1); text-align:center; text-decoration:none; font-size:0.75rem; color:#94a3b8; display:flex; align-items:center; justify-content:center; gap:6px;">
             <i class="fas fa-users"></i> All Profiles
         </a>
     </div>
@@ -237,6 +245,11 @@
 
                 // Load default
                 const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('preview') === 'true' || urlParams.get('mode') === 'preview') {
+                    const cp = document.getElementById('control-panel');
+                    if (cp) cp.style.display = 'none';
+                }
+
                 const initialPattern = urlParams.get('template') || 'twopage';
                 startRender(initialPattern);
                 renderEditButtons(); // Add edit buttons after render
@@ -258,6 +271,28 @@
             if (pattern === 'classic' && window.renderClassic) window.renderClassic(DATA, ROOT, STYLE);
 
             setTimeout(renderEditButtons, 500); // Re-attach buttons after render
+        }
+
+        function openPreview() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const template = urlParams.get('template') || 'twopage';
+            const user = urlParams.get('user') || CURRENT_USER || 'shubhamfarera';
+            window.open(`preview.html?user=${user}&template=${template}`, '_blank');
+        }
+
+        function copyPreviewLink() {
+            const base = window.location.origin + window.location.pathname.replace(/[^/]*$/, '');
+            const previewUrl = `${base}preview.html`;
+            navigator.clipboard.writeText(previewUrl).then(() => {
+                const btn = document.getElementById('copy-btn');
+                if (btn) {
+                    const orig = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check" style="color:#10b981;"></i> Link Copied!';
+                    setTimeout(() => { btn.innerHTML = orig; }, 2500);
+                }
+            }).catch(() => {
+                prompt('Recruiter preview link:', previewUrl);
+            });
         }
 
         // --- EDITING LOGIC ---
