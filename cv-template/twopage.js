@@ -36,7 +36,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             background: var(--bg-page);
             width: 210mm;
             min-height: 297mm;
-            padding: 8mm 12mm 6mm 12mm;
+            padding: 7mm 12mm 5mm 12mm;
             box-sizing: border-box;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             border-radius: 4px;
@@ -53,7 +53,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             justify-content: space-between;
             border-bottom: 2px solid var(--accent);
             padding-bottom: 5px;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         .cv-header-text h1 {
@@ -107,15 +107,15 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         /* Section Headings */
         .cv-sec-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.83rem;
+            font-size: 0.82rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
             display: flex;
             align-items: center;
             gap: 6px;
-            margin: 6px 0 3px 0;
+            margin: 7px 0 3px 0;
             padding-bottom: 2px;
             border-bottom: 1.5px solid var(--accent);
         }
@@ -127,9 +127,9 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         /* Summary */
         .cv-summary-p {
-            font-size: 0.77rem;
+            font-size: 0.76rem;
             color: var(--text-body);
-            margin: 0 0 3px 0;
+            margin: 0 0 3.5px 0;
             text-align: justify;
             line-height: 1.34;
         }
@@ -139,8 +139,8 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             display: flex;
             flex-direction: column;
             gap: 2.5px;
-            margin-bottom: 5px;
-            font-size: 0.75rem;
+            margin-bottom: 4px;
+            font-size: 0.74rem;
         }
 
         .cv-skill-row {
@@ -166,23 +166,23 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         .cv-skill-values {
             color: var(--text-body);
-            line-height: 1.30;
+            line-height: 1.32;
         }
 
         /* Job Entry */
         .cv-job {
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .cv-job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2px;
+            margin-bottom: 1.5px;
         }
 
         .cv-job-role {
-            font-size: 0.83rem;
+            font-size: 0.82rem;
             font-weight: 700;
             color: var(--primary);
         }
@@ -190,12 +190,12 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         .cv-job-company {
             color: var(--accent);
             font-weight: 600;
-            font-size: 0.82rem;
+            font-size: 0.81rem;
             margin-left: 4px;
         }
 
         .cv-job-date {
-            font-size: 0.74rem;
+            font-size: 0.73rem;
             font-weight: 600;
             color: var(--text-muted);
             white-space: nowrap;
@@ -203,14 +203,14 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         .cv-job-bullets {
             margin: 0;
-            padding-left: 14px;
-            font-size: 0.75rem;
+            padding-left: 13px;
+            font-size: 0.74rem;
             color: var(--text-body);
-            line-height: 1.30;
+            line-height: 1.31;
         }
 
         .cv-job-bullets li {
-            margin-bottom: 1.5px;
+            margin-bottom: 2px;
             text-align: justify;
         }
 
@@ -222,8 +222,8 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         .cv-platforms-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5px;
-            margin-bottom: 5px;
+            gap: 4px;
+            margin-bottom: 4px;
         }
 
         .cv-platform-card {
@@ -232,32 +232,40 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             border-left: 3px solid var(--accent);
             padding: 4px 7px;
             border-radius: 4px;
-            font-size: 0.73rem;
+            font-size: 0.72rem;
             color: var(--text-body);
-            line-height: 1.28;
+            line-height: 1.26;
         }
 
         .cv-platform-card strong {
             color: var(--primary);
             display: block;
             margin-bottom: 1px;
-            font-size: 0.76rem;
+            font-size: 0.75rem;
+        }
+
+        .cv-platform-card .tech-stack {
+            font-size: 0.68rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 2px;
+            display: block;
         }
 
         /* Education */
         .cv-edu-container {
             display: flex;
             flex-direction: column;
-            gap: 2px;
-            margin-bottom: 5px;
+            gap: 1.5px;
+            margin-bottom: 3px;
         }
 
         .cv-edu-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            padding: 2px 0;
-            font-size: 0.76rem;
+            padding: 1px 0;
+            font-size: 0.74rem;
         }
 
         .cv-edu-degree {
@@ -267,22 +275,22 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         .cv-edu-school {
             color: var(--text-muted);
-            font-size: 0.74rem;
+            font-size: 0.73rem;
         }
 
         .cv-edu-grade {
             font-weight: 700;
             color: var(--accent);
-            font-size: 0.75rem;
+            font-size: 0.74rem;
         }
 
         /* Achievements & Leadership */
         .cv-achieve-list {
-            margin: 2px 0 0 0;
-            padding-left: 14px;
-            font-size: 0.75rem;
+            margin: 1px 0 0 0;
+            padding-left: 13px;
+            font-size: 0.74rem;
             color: var(--text-body);
-            line-height: 1.30;
+            line-height: 1.28;
         }
 
         .cv-achieve-list li {
@@ -403,23 +411,23 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                 <div class="cv-skills-table">
                     <div class="cv-skill-row">
                         <span class="cv-skill-label"><i class="fas fa-code"></i> Languages & Core</span>
-                        <span class="cv-skill-values"><strong>Java (8 / 11 / 17)</strong>, Data Structures & Algorithms (DSA), Object-Oriented Analysis & Design (OOAD), Multithreading & Concurrency.</span>
+                        <span class="cv-skill-values"><strong>Java (8 / 11 / 17)</strong>, Data Structures & Algorithms (DSA), Object-Oriented Analysis & Design (OOAD), Multithreading & Concurrency, Memory Management & JVM Tuning.</span>
                     </div>
                     <div class="cv-skill-row">
                         <span class="cv-skill-label"><i class="fas fa-network-wired"></i> Distributed Systems</span>
-                        <span class="cv-skill-values"><strong>Apache Kafka</strong>, Saga Pattern (Orchestration & Choreography), Transactional Outbox, <strong>Elasticsearch</strong>, Redis Caching, Consistent Hashing, CAP & PACELC Theorems, ZooKeeper.</span>
+                        <span class="cv-skill-values"><strong>Apache Kafka</strong> (Event Streaming, Partitioning), Saga Pattern (Orchestration & Choreography), Transactional Outbox, <strong>Elasticsearch</strong>, Redis Caching, Consistent Hashing, CAP & PACELC Theorems, ZooKeeper.</span>
                     </div>
                     <div class="cv-skill-row">
                         <span class="cv-skill-label"><i class="fas fa-cubes"></i> Architecture & LLD</span>
-                        <span class="cv-skill-values"><strong>Microservices Architecture</strong>, High-Level Design (HLD), Low-Level Design (LLD), <strong>SOLID Principles</strong>, GoF Design Patterns (Strategy, Factory, Observer, Decorator, State), Clean Architecture.</span>
+                        <span class="cv-skill-values"><strong>Microservices Architecture</strong>, High-Level Design (HLD), Low-Level Design (LLD), <strong>SOLID Principles</strong>, GoF Design Patterns (Strategy, Factory, Observer, Decorator, State), Domain-Driven Design (DDD), Clean Architecture.</span>
                     </div>
                     <div class="cv-skill-row">
                         <span class="cv-skill-label"><i class="fas fa-database"></i> Frameworks & DB</span>
-                        <span class="cv-skill-values"><strong>Spring Boot</strong>, Spring Cloud, Hibernate / JPA, RESTful APIs, <strong>MySQL</strong>, <strong>Oracle</strong>, PostgreSQL, Database Sharding & Master-Slave Replication, SQL Optimization.</span>
+                        <span class="cv-skill-values"><strong>Spring Boot</strong>, Spring Cloud, Hibernate / JPA, RESTful APIs, <strong>MySQL</strong>, <strong>Oracle</strong>, PostgreSQL, Database Sharding & Master-Slave Replication, SQL Optimization, HikariCP Connection Pools.</span>
                     </div>
                     <div class="cv-skill-row">
                         <span class="cv-skill-label"><i class="fas fa-cloud"></i> Cloud & DevOps</span>
-                        <span class="cv-skill-values"><strong>Microsoft Azure (AZ-900 Certified)</strong>, Docker, CI/CD (Jenkins Pipelines), CodeQL Static Analysis, SonarQube Quality Gates, Git & GitHub, JUnit, Mockito, Agile / Scrum.</span>
+                        <span class="cv-skill-values"><strong>Microsoft Azure (AZ-900 Certified)</strong>, Docker, CI/CD (Jenkins Pipelines), CodeQL Static Analysis, SonarQube Quality Gates, Git & GitHub, JUnit, Mockito, TDD, Agile / Scrum Leadership.</span>
                     </div>
                 </div>
 
@@ -440,17 +448,6 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </ul>
                 </div>
 
-                <div class="cv-sheet-footer">
-                    <span>${DATA.profile.name} — Senior Software Engineer (SDE-3)</span>
-                    <span>Page 1 of 2</span>
-                </div>
-            </section>
-
-            <!-- ================= PAGE 2 ================= -->
-            <section class="cv-sheet" id="page-2">
-                <!-- Professional Experience Continued (All Accenture Progression) -->
-                <div class="cv-sec-title"><i class="fas fa-briefcase"></i> Professional Experience (Continued)</div>
-
                 <!-- Accenture Senior Analyst Role -->
                 <div class="cv-job">
                     <div class="cv-job-header">
@@ -462,8 +459,20 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </div>
                     <ul class="cv-job-bullets">
                         ${accSrAnalyst.details.map(d => `<li>${d}</li>`).join('')}
+                        <li><strong>Engineering Standards & Mentorship:</strong> Conducted Low-Level Design (LLD) reviews and mentored junior engineers on SOLID principles and clean code practices, ensuring 0 defect escapes across 4 major production releases.</li>
                     </ul>
                 </div>
+
+                <div class="cv-sheet-footer">
+                    <span>${DATA.profile.name} — Senior Software Engineer (SDE-3)</span>
+                    <span>Page 1 of 2</span>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 2 ================= -->
+            <section class="cv-sheet" id="page-2">
+                <!-- Professional Experience Continued -->
+                <div class="cv-sec-title"><i class="fas fa-briefcase"></i> Professional Experience (Continued)</div>
 
                 <!-- Accenture Analyst -->
                 <div class="cv-job">
@@ -476,6 +485,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </div>
                     <ul class="cv-job-bullets">
                         ${accAnalyst.details.map(d => `<li>${d}</li>`).join('')}
+                        <li><strong>Asynchronous Event Handling:</strong> Integrated messaging queues for asynchronous event dispatching across billing and carrier notification services, achieving 99.95% delivery success rate under surge traffic.</li>
                     </ul>
                 </div>
 
@@ -490,24 +500,51 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </div>
                     <ul class="cv-job-bullets">
                         ${accAssociate.details.map(d => `<li>${d}</li>`).join('')}
+                        <li><strong>Agile Delivery & RCA:</strong> Collaborated with cross-functional teams to define user stories, perform root cause analysis (RCA), and deliver bi-weekly sprint commitments on schedule.</li>
                     </ul>
                 </div>
 
                 <!-- Key Architectural Platforms & Systems -->
                 <div class="cv-sec-title"><i class="fas fa-rocket"></i> Key Architectural Platforms & Distributed Systems</div>
                 <div class="cv-platforms-grid">
-                    ${DATA.highlights.platforms.slice(0, 4).map(p => {
-                        const parts = p.split(':');
-                        const title = parts[0];
-                        const desc = parts.slice(1).join(':');
-                        return `
-                            <div class="cv-platform-card">
-                                <strong>${title}</strong>
-                                <span>${desc}</span>
-                            </div>
-                        `;
-                    }).join('')}
+                    <div class="cv-platform-card">
+                        <strong>Distributed Event-Driven Insurance Platform</strong>
+                        <span class="tech-stack">Java 17 • Spring Boot • Apache Kafka • Saga Pattern</span>
+                        High-throughput microservices handling 10M+ daily events with 99.99% availability, employing Saga choreography & Transactional Outbox for cross-service consistency.
+                    </div>
+                    <div class="cv-platform-card">
+                        <strong>Elasticsearch Search & Indexing Engine</strong>
+                        <span class="tech-stack">Elasticsearch 7.x • Spring Data ES • Custom Analyzers</span>
+                        Low-latency policy and member search with custom analyzers, n-gram tokenization, and typeahead lookup, slashing p99 query latency by 65% (450ms → &lt;150ms).
+                    </div>
+                    <div class="cv-platform-card">
+                        <strong>Asset Rebalancing & Investment Platform</strong>
+                        <span class="tech-stack">Java • Spring Boot • Oracle DB • Idempotent REST</span>
+                        Real-time portfolio rebalancing engine executing automated allocations for $500M+ in assets under management (AUM) with strict idempotent guarantees and batch optimization.
+                    </div>
+                    <div class="cv-platform-card">
+                        <strong>Logistics Order Lifecycle Engine</strong>
+                        <span class="tech-stack">Java • Spring Boot • HikariCP • State & Strategy Patterns</span>
+                        High-throughput order tracking and event handling pipeline managing 200K+ daily shipments with zero race conditions and 30% faster peak response times.
+                    </div>
                 </div>
+
+                <!-- Architectural Principles & System Design Mastery -->
+                <div class="cv-sec-title"><i class="fas fa-microchip"></i> Architectural Principles & System Design Mastery</div>
+                <ul class="cv-job-bullets" style="margin-bottom: 4px;">
+                    <li><strong>Event-Driven Microservices & Saga Pattern:</strong> Designed asynchronous event streaming architectures with Apache Kafka; implemented Saga orchestration and choreographies with Transactional Outbox patterns to guarantee eventual consistency across distributed microservices.</li>
+                    <li><strong>Low-Level Design (LLD) & Clean Craftsmanship:</strong> Strict adherence to SOLID principles and Gang of Four (GoF) design patterns (Strategy, Factory, Observer, Decorator, State); established automated CodeQL static analysis and SonarQube quality gates.</li>
+                    <li><strong>High-Scale Persistence & Caching Tier:</strong> Scaled persistence architectures utilizing MySQL/Oracle read replicas, horizontal table partitioning, and multi-tier Redis caching; applied Resilience4j circuit breakers and CAP/PACELC trade-offs.</li>
+                    <li><strong>Distributed Consensus & Coordination:</strong> Applied distributed systems fundamentals including Consistent Hashing, ZooKeeper coordination, distributed locking, and graceful degradation to guarantee fault tolerance under high-concurrency loads.</li>
+                </ul>
+
+                <!-- Engineering Leadership & Governance -->
+                <div class="cv-sec-title"><i class="fas fa-users-cog"></i> Engineering Leadership, Mentorship & Governance</div>
+                <ul class="cv-job-bullets" style="margin-bottom: 4px;">
+                    <li><strong>Technical Mentorship:</strong> Mentored 10+ junior and mid-level engineers in Data Structures & Algorithms (DSA), Low-Level Design (LLD), SOLID principles, and clean code architecture.</li>
+                    <li><strong>Architecture & Design Reviews:</strong> Spearheaded technical architecture reviews, High-Level Design (HLD) specifications, API contracts, and design doc walkthroughs for mission-critical microservices.</li>
+                    <li><strong>Quality & Security Champions:</strong> Enforced test-driven development (TDD), comprehensive JUnit/Mockito test suites (88% coverage), automated SonarQube quality gates, and zero-vulnerability security pipelines.</li>
+                </ul>
 
                 <!-- Education -->
                 <div class="cv-sec-title"><i class="fas fa-graduation-cap"></i> Education</div>
@@ -518,8 +555,18 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                             <span class="cv-edu-school">Shri Govindram Seksaria Institute of Technology and Science (SGSITS Indore, MP)</span>
                         </div>
                         <div>
-                            <span style="font-size:0.75rem; color:var(--text-muted);">2013 – 2017</span> &nbsp;|&nbsp;
+                            <span style="font-size:0.73rem; color:var(--text-muted);">2013 – 2017</span> &nbsp;|&nbsp;
                             <span class="cv-edu-grade">CGPA: 7.1</span>
+                        </div>
+                    </div>
+                    <div class="cv-edu-row">
+                        <div>
+                            <span class="cv-edu-degree">Higher Secondary School Certificate (Class XII, PCM)</span> &nbsp;•&nbsp;
+                            <span class="cv-edu-school">Vivekanand Vidya Vihar, Maral Sarovar (CBSE)</span>
+                        </div>
+                        <div>
+                            <span style="font-size:0.73rem; color:var(--text-muted);">2011 – 2012</span> &nbsp;|&nbsp;
+                            <span class="cv-edu-grade">87.0%</span>
                         </div>
                     </div>
                 </div>

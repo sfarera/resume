@@ -429,10 +429,13 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                             <strong>Claims Event Platform:</strong> Kafka + Saga microservices handling 10M+ daily events (99.99% uptime).
                         </div>
                         <div class="cv-platform-mini-card">
-                            <strong>Elasticsearch Query Engine:</strong> Member search with custom typeahead DSL (<150ms p99 latency).
+                            <strong>Elasticsearch Query Engine:</strong> Member search with custom typeahead DSL (&lt;150ms p99 latency).
                         </div>
                         <div class="cv-platform-mini-card">
                             <strong>Asset Rebalancing Engine:</strong> Real-time portfolio calculation pipeline managing $500M+ AUM idempotently.
+                        </div>
+                        <div class="cv-platform-mini-card">
+                            <strong>Logistics Order Engine:</strong> Real-time event pipeline handling 200K+ daily shipments with zero race conditions.
                         </div>
                     </div>
                     <div>
@@ -440,6 +443,9 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                         <div class="cv-meta-item">
                             <strong>B.E. – Information Technology</strong><br>
                             SGSITS Indore (2013–2017) | <strong>CGPA: 7.1</strong>
+                        </div>
+                        <div class="cv-meta-item">
+                            <strong>Higher Secondary (Class XII, CBSE)</strong>: <strong>87.0%</strong>
                         </div>
                         <div class="cv-meta-item">
                             <strong><i class="fab fa-microsoft" style="color:#00a4ef;"></i> Azure Certified (AZ-900)</strong> | Cloud Architecture
