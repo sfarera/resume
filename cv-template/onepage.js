@@ -337,16 +337,16 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                         <span>Java (8/11/17), OOP, Collections, Streams, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs</span>
                     </div>
                     <div class="cv-skill-line-onepage">
-                        <strong>Databases & Quality:</strong>
-                        <span>SQL, MySQL, Oracle, JUnit, Mockito, Unit Testing, Debugging & Troubleshooting, SonarQube</span>
+                        <strong>Databases & Caching:</strong>
+                        <span>SQL, MySQL, Oracle, Redis, JUnit, Mockito, Unit Testing, Debugging & Troubleshooting, SonarQube</span>
                     </div>
                     <div class="cv-skill-line-onepage">
-                        <strong>Tools & Build:</strong>
-                        <span>Git, Maven, Docker, Jenkins CI/CD</span>
+                        <strong>DevOps & Infrastructure:</strong>
+                        <span>Kubernetes, NGINX Ingress, Docker, Git, Maven, Jenkins CI/CD</span>
                     </div>
                     <div class="cv-skill-line-onepage">
                         <strong>Additional Knowledge:</strong>
-                        <span>Apache Kafka, Elasticsearch, Redis, Microservices Architecture, Distributed Systems Concepts, HLD & LLD</span>
+                        <span>Apache Kafka, Elasticsearch, Microservices Architecture, Distributed Systems Concepts, HLD & LLD</span>
                     </div>
                 </div>
 
@@ -364,8 +364,8 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                     <ul class="cv-job-bullets-onepage">
                         <li>Developed and maintained Java and Spring Boot backend services supporting enterprise business workflows.</li>
                         <li>Implemented REST APIs for application features with input validation, exception handling, and database integration.</li>
-                        <li>Worked with Spring Data JPA and Hibernate for database operations, entity mappings, and business logic.</li>
-                        <li>Investigated application defects, resolved backend issues through debugging, and developed JUnit/Mockito test suites.</li>
+                        <li>Worked with Spring Data JPA and Hibernate for database operations, and integrated Redis caching to optimize data access.</li>
+                        <li>Deployed services to Kubernetes clusters, configuring NGINX Ingress routing rules, endpoints, and health check probes.</li>
                     </ul>
                 </div>
 

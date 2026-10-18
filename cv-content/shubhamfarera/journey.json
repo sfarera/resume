@@ -6,10 +6,10 @@
     "details": [
       "Developed and maintained Java and Spring Boot backend services supporting enterprise business workflows.",
       "Implemented REST APIs for application features, including request validation, exception handling, and database integration.",
-      "Worked with Spring Data JPA and Hibernate to implement database operations, entity mappings, and business logic.",
+      "Worked with Spring Data JPA and Hibernate for database operations, and integrated Redis caching to reduce repetitive query load on relational data.",
+      "Deployed containerized backend services to Kubernetes clusters, configuring NGINX Ingress routing rules, endpoints, and health check probes.",
       "Investigated application defects and resolved backend issues through debugging, log analysis, and code fixes.",
-      "Developed unit tests using JUnit and Mockito to validate business logic and improve code reliability.",
-      "Participated in Agile development, peer code reviews, and release deployment activities."
+      "Developed unit tests using JUnit and Mockito to validate business logic, and participated in Agile development, code reviews, and releases."
     ]
   },
   {

@@ -417,16 +417,16 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                             <span>Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST API Development, Dependency Injection, Transaction Management</span>
                         </div>
                         <div class="cv-skill-line">
-                            <strong>Databases & Persistence:</strong>
-                            <span>SQL, Relational Databases (MySQL, Oracle)</span>
+                            <strong>Databases & Caching:</strong>
+                            <span>SQL, Relational Databases (MySQL, Oracle), Redis</span>
                         </div>
                         <div class="cv-skill-line">
                             <strong>Testing & Code Quality:</strong>
                             <span>JUnit, Mockito, Unit Testing, Debugging & Troubleshooting, SonarQube</span>
                         </div>
                         <div class="cv-skill-line">
-                            <strong>Build & DevOps Tools:</strong>
-                            <span>Git, Maven, Docker, Jenkins CI/CD</span>
+                            <strong>DevOps & Infrastructure:</strong>
+                            <span>Kubernetes, NGINX Ingress, Docker, Git, Maven, Jenkins CI/CD</span>
                         </div>
                     </div>
                 </div>
@@ -436,7 +436,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     <div class="cv-skills-grid">
                         <div class="cv-skill-line">
                             <strong>Distributed Systems & Design:</strong>
-                            <span>Apache Kafka, Elasticsearch, Redis, Microservices Architecture, Distributed Systems Concepts, High-Level Design (HLD) & Low-Level Design (LLD)</span>
+                            <span>Apache Kafka, Elasticsearch, Microservices Architecture, Distributed Systems Concepts, High-Level Design (HLD) & Low-Level Design (LLD)</span>
                         </div>
                     </div>
                 </div>
