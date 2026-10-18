@@ -368,8 +368,8 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                     </ul>
                 </div>
 
-                <!-- Technical Projects & Highlights (1 Pointer Highlights Only) -->
-                <div class="latex-sec-title">Technical Projects & Highlights</div>
+                <!-- Projects and Technical Systems (1 Pointer Highlights Only) -->
+                <div class="latex-sec-title">Projects and Technical Systems</div>
 
                 <div style="margin-bottom: 2.5px;">
                     <div class="latex-project-row">

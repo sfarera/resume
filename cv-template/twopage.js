@@ -422,54 +422,39 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </ul>
                 </div>
 
-                <!-- Competitions and Projects (Sagar Farera Layout) -->
+                <!-- Projects and Technical Systems (Single Pointer Highlights) -->
                 <div class="latex-sec-title">Projects and Technical Systems</div>
 
                 <!-- Parking Lot System -->
-                <div class="latex-project">
-                    <div class="latex-project-row1">
-                        <span>• Parking Lot System — Object-Oriented Design & Backend Service</span>
-                    </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Design Patterns (Factory, Strategy)</span>
-                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
+                <div class="latex-project" style="margin-bottom: 5px;">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1px;">
+                        <span style="font-weight:700; font-size:0.86rem;">• Parking Lot System — Object-Oriented Design & Backend Service</span>
+                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link" style="font-style:italic; font-size:0.82rem; color:#000; text-decoration:none;">github.com/sfarera</a>
                     </div>
                     <ul class="latex-bullets">
-                        <li>Implemented low-level object-oriented design applying Creational and Behavioral design patterns (Factory, Strategy) to manage parking spots, vehicle types, and dynamic fee calculation strategies.</li>
-                        <li>Developed REST APIs to handle parking ticket issuance, vehicle check-in/checkout workflows, and real-time slot availability tracking.</li>
-                        <li>Applied thread-safe synchronization and concurrent collections to ensure atomic spot reservations under concurrent vehicle entry requests.</li>
+                        <li>Implemented low-level design applying Factory and Strategy patterns for automated slot allocation, dynamic fee calculation, and REST APIs.</li>
                     </ul>
                 </div>
 
                 <!-- Movie Ticket Booking System -->
-                <div class="latex-project">
-                    <div class="latex-project-row1">
-                        <span>• Movie Ticket Booking System — Transaction Management & Booking Service</span>
-                    </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, JPA, Concurrency & Seat Locking</span>
-                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
+                <div class="latex-project" style="margin-bottom: 5px;">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1px;">
+                        <span style="font-weight:700; font-size:0.86rem;">• Movie Ticket Booking System — Transaction Management & Booking Service</span>
+                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link" style="font-style:italic; font-size:0.82rem; color:#000; text-decoration:none;">github.com/sfarera</a>
                     </div>
                     <ul class="latex-bullets">
-                        <li>Engineered a booking service with relational data modeling, handling concurrent seat reservations, show scheduling, and pricing tiers.</li>
-                        <li>Utilized Spring transaction management (@Transactional) and database locking mechanisms to prevent double-booking and maintain transactional integrity.</li>
-                        <li>Implemented RESTful payment reconciliation endpoints and automated booking expiration timers using Spring scheduling.</li>
+                        <li>Engineered booking service with concurrency handling and transactional seat locking (@Transactional) to eliminate double-booking.</li>
                     </ul>
                 </div>
 
                 <!-- Expense Sharing Application -->
-                <div class="latex-project">
-                    <div class="latex-project-row1">
-                        <span>• Expense Sharing Application — Domain Modeling & Split Engine</span>
-                    </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Object-Oriented Design</span>
-                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
+                <div class="latex-project" style="margin-bottom: 5px;">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1px;">
+                        <span style="font-weight:700; font-size:0.86rem;">• Expense Sharing Application — Domain Modeling & Split Engine</span>
+                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link" style="font-style:italic; font-size:0.82rem; color:#000; text-decoration:none;">github.com/sfarera</a>
                     </div>
                     <ul class="latex-bullets">
-                        <li>Modeled split-expense domain logic supporting multiple split strategies (equal, exact amounts, percentage) among user groups.</li>
-                        <li>Exposed RESTful endpoints for group management, expense creation, and calculating consolidated balances to minimize settlement transactions.</li>
-                        <li>Designed graph-based debt simplification logic to compute net balances and minimize total cash flow settlements among group participants.</li>
+                        <li>Modeled split-expense domain logic supporting multiple split strategies with debt simplification logic to calculate minimal net settlements.</li>
                     </ul>
                 </div>
 
