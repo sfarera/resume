@@ -6,7 +6,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             font-family: "Times New Roman", Times, "TeX Gyre Termes", STIXGeneral, serif;
             margin: 0;
             padding: 1.5rem 0;
-            line-height: 1.27;
+            line-height: 1.24;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -21,7 +21,8 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             width: 210mm;
             min-height: 297mm;
             max-height: 297mm;
-            padding: 10mm 15mm 9mm 15mm;
+            height: 297mm;
+            padding: 9mm 13mm 8mm 13mm;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             position: relative;
@@ -33,26 +34,31 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             color: #000000;
         }
 
-        /* LaTeX Header (Exactly Sagar Farera Style) */
+        /* LaTeX Header (Sagar Farera Style: 2-column justified, compact) */
         .latex-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+        }
+
+        .latex-header-left {
+            display: flex;
+            flex-direction: column;
         }
 
         .latex-name {
-            font-size: 1.70rem;
+            font-size: 1.55rem;
             font-weight: 700;
             color: #000000;
-            line-height: 1.1;
-            margin: 0 0 3px 0;
+            line-height: 1.05;
+            margin: 0 0 2px 0;
             letter-spacing: -0.2px;
         }
 
         .latex-contact-left, .latex-contact-right {
-            font-size: 0.81rem;
-            line-height: 1.32;
+            font-size: 0.79rem;
+            line-height: 1.28;
             color: #000000;
         }
 
@@ -69,14 +75,15 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             text-decoration: underline;
         }
 
-        /* LaTeX Section Title */
+        /* LaTeX Section Title: Bold with 1px black underline */
         .latex-sec-title {
-            font-size: 0.98rem;
+            font-size: 0.94rem;
             font-weight: 700;
             color: #000000;
             border-bottom: 1px solid #000000;
-            margin: 6px 0 4px 0;
+            margin: 4.5px 0 3px 0;
             padding-bottom: 1px;
+            letter-spacing: 0.1px;
         }
 
         /* Education Entry */
@@ -84,7 +91,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.83rem;
+            font-size: 0.81rem;
             font-weight: 700;
             color: #000000;
         }
@@ -93,7 +100,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.80rem;
+            font-size: 0.78rem;
             color: #000000;
         }
 
@@ -104,14 +111,15 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         /* Skills Summary */
         .latex-skills-list {
             margin: 0;
-            padding-left: 16px;
-            font-size: 0.79rem;
-            line-height: 1.30;
+            padding-left: 15px;
+            font-size: 0.77rem;
+            line-height: 1.25;
             list-style-type: disc;
         }
 
         .latex-skills-list li {
-            margin-bottom: 1.5px;
+            margin-bottom: 1.2px;
+            text-align: justify;
         }
 
         .latex-skills-list strong {
@@ -124,39 +132,41 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.84rem;
+            font-size: 0.82rem;
             font-weight: 700;
             color: #000000;
-            margin-bottom: 1px;
+            margin-bottom: 0.5px;
         }
 
         .latex-role-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.80rem;
+            font-size: 0.785rem;
             color: #000000;
-            margin-bottom: 1.5px;
+            margin-bottom: 1px;
         }
 
-        .latex-role-title, .latex-role-date {
-            font-style: italic;
-        }
         .latex-role-title {
             font-weight: 700;
+            font-style: italic;
         }
 
-        /* Sub-bullets */
+        .latex-role-date {
+            font-style: italic;
+        }
+
+        /* Sub-bullets with open circle ◦ */
         .latex-bullets {
             margin: 0;
-            padding-left: 18px;
-            font-size: 0.775rem;
-            line-height: 1.28;
+            padding-left: 16px;
+            font-size: 0.765rem;
+            line-height: 1.23;
             list-style-type: circle;
         }
 
         .latex-bullets li {
-            margin-bottom: 1.5px;
+            margin-bottom: 1.2px;
             text-align: justify;
         }
 
@@ -165,7 +175,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.82rem;
+            font-size: 0.80rem;
             font-weight: 700;
             color: #000000;
         }
@@ -174,9 +184,9 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.78rem;
+            font-size: 0.765rem;
             color: #000000;
-            margin-bottom: 1.5px;
+            margin-bottom: 0.5px;
         }
 
         .latex-project-tech, .latex-project-link {
@@ -186,6 +196,10 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         .latex-project-link {
             color: #000000;
             text-decoration: none;
+        }
+
+        .latex-project-link:hover {
+            text-decoration: underline;
         }
 
         .cv-sheet-footer-onepage {
@@ -200,11 +214,11 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             font-family: "Times New Roman", Times, serif;
         }
 
-        /* Print Media Styles */
+        /* Print Media Styles - Zero Rasterization, Pure Vector Text, Strict 1 Page */
         @media print {
             @page {
                 size: A4 portrait;
-                margin: 6mm 12mm 6mm 12mm !important;
+                margin: 7mm 11mm 6mm 11mm !important;
             }
 
             html, body {
@@ -213,9 +227,9 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 padding: 0 !important;
                 margin: 0 !important;
                 width: 100% !important;
-                height: auto !important;
+                height: 100% !important;
                 min-height: 0 !important;
-                overflow: visible !important;
+                overflow: hidden !important;
                 font-family: "Times New Roman", Times, serif !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
@@ -227,15 +241,15 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 gap: 0 !important;
                 display: block !important;
                 width: 100% !important;
-                height: auto !important;
+                height: 100% !important;
             }
 
             .cv-sheet-onepage {
                 width: 100% !important;
                 max-width: 100% !important;
-                height: auto !important;
+                height: 100% !important;
                 min-height: 0 !important;
-                max-height: none !important;
+                max-height: 100% !important;
                 padding: 0 !important;
                 margin: 0 !important;
                 box-shadow: none !important;
@@ -245,7 +259,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 break-inside: avoid !important;
                 page-break-after: avoid !important;
                 break-after: avoid !important;
-                overflow: visible !important;
+                overflow: hidden !important;
                 box-sizing: border-box !important;
                 font-family: "Times New Roman", Times, serif !important;
             }
@@ -256,15 +270,10 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         }
     `;
 
-    const tcsJob = DATA.journey[0];
-    const accSrAnalyst = DATA.journey[1];
-    const accAnalyst = DATA.journey[2];
-    const accAssociate = DATA.journey[3];
-
     ROOT.innerHTML = `
         <div class="cv-wrapper">
             <section class="cv-sheet-onepage">
-                <!-- Header (Sagar Farera Layout) -->
+                <!-- Header (Exact Sagar Farera Layout) -->
                 <header class="latex-header">
                     <div class="latex-header-left">
                         <div class="latex-name">${DATA.profile.name}</div>
@@ -280,7 +289,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                     </div>
                 </header>
 
-                <!-- Education -->
+                <!-- Education (Sagar Farera Layout) -->
                 <div class="latex-sec-title">Education</div>
                 <div>
                     <div class="latex-edu-row1">
@@ -293,22 +302,22 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                     </div>
                 </div>
 
-                <!-- Skills Summary -->
+                <!-- Skills Summary (Sagar Farera Layout) -->
                 <div class="latex-sec-title">Skills Summary</div>
                 <ul class="latex-skills-list">
                     <li><strong>• Languages :</strong> Java (8 / 11 / 17), SQL</li>
-                    <li><strong>• Backend :</strong> Spring Boot, Spring MVC, Spring Data JPA, Hibernate, RESTful APIs, Microservices</li>
-                    <li><strong>• Databases & Caching :</strong> MySQL, Oracle, Redis</li>
-                    <li><strong>• DevOps & Cloud :</strong> Kubernetes, NGINX Ingress, Docker, Jenkins CI/CD, Git, Maven, Microsoft Azure (AZ-900)</li>
-                    <li><strong>• Testing & Quality :</strong> JUnit, Mockito, SonarQube, Unit Testing, Debugging & Troubleshooting</li>
-                    <li><strong>• Additional Knowledge :</strong> Apache Kafka, Elasticsearch, Distributed Systems Concepts, HLD & LLD</li>
+                    <li><strong>• Backend Frameworks :</strong> Spring Boot, Spring MVC, Spring Data JPA, Hibernate, RESTful APIs, Microservices</li>
+                    <li><strong>• Databases & Caching :</strong> MySQL, Oracle DB, PostgreSQL, Redis (In-Memory Caching & Session Management)</li>
+                    <li><strong>• Cloud & DevOps :</strong> Kubernetes, NGINX Ingress, Docker Containers, Jenkins CI/CD, Git, Maven, Microsoft Azure (AZ-900)</li>
+                    <li><strong>• Testing & Quality :</strong> JUnit 5, Mockito, SonarQube, Unit & Integration Testing, Application Debugging & Profiling</li>
+                    <li><strong>• Core Engineering :</strong> Object-Oriented Design (OOD), Design Patterns, Low-Level & High-Level System Design, REST API Standards</li>
                 </ul>
 
-                <!-- Work Experience -->
+                <!-- Work Experience (All 4 Progressive Roles with Dense Technical Depth) -->
                 <div class="latex-sec-title">Work Experience</div>
 
-                <!-- TCS -->
-                <div style="margin-bottom: 4px;">
+                <!-- Tata Consultancy Services -->
+                <div style="margin-bottom: 3px;">
                     <div class="latex-company-row">
                         <span>• Tata Consultancy Services — Software Development (Backend)</span>
                         <span>Pune, India</span>
@@ -318,79 +327,93 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                         <span class="latex-role-date">Oct 2023 – Present</span>
                     </div>
                     <ul class="latex-bullets">
-                        <li>Developed and maintained Java and Spring Boot backend services supporting enterprise business workflows.</li>
-                        <li>Implemented REST APIs for application features, including request validation, exception handling, and database integration.</li>
-                        <li>Worked with Spring Data JPA and Hibernate for database operations, and integrated Redis caching to reduce repetitive query load.</li>
-                        <li>Deployed containerized backend services to Kubernetes clusters, configuring NGINX Ingress routing rules, endpoints, and health checks.</li>
-                        <li>Investigated application defects, resolved backend issues through debugging, and authored JUnit/Mockito test suites.</li>
+                        <li>Developed and maintained enterprise backend microservices using Java 17 and Spring Boot, handling high-volume transaction processing workflows.</li>
+                        <li>Engineered secure RESTful APIs implementing request payload validation, consistent HTTP status mapping, and structured centralized error handling.</li>
+                        <li>Configured Spring Data JPA and Hibernate for database persistence; integrated Redis caching for frequently accessed data to reduce database load.</li>
+                        <li>Managed containerized microservice deployments on Kubernetes clusters; configured NGINX Ingress routing rules, endpoints, and health probes.</li>
+                        <li>Authored comprehensive JUnit and Mockito test suites, participated in peer code reviews, and conducted production defect triage using log analysis.</li>
                     </ul>
                 </div>
 
-                <!-- Accenture -->
-                <div style="margin-bottom: 4px;">
+                <!-- Accenture: 3 Progressive Roles Nested (Identical to Sagar's Pazcare Progression) -->
+                <div style="margin-bottom: 3px;">
                     <div class="latex-company-row">
                         <span>• Accenture — Software Development (Backend)</span>
                         <span>Pune, India</span>
                     </div>
+                    
+                    <!-- Role 1: Senior Analyst -->
                     <div class="latex-role-row">
                         <span class="latex-role-title">Application Development Senior Analyst</span>
                         <span class="latex-role-date">Sept 2021 – Aug 2023</span>
                     </div>
-                    <ul class="latex-bullets" style="margin-bottom: 3px;">
-                        <li>Developed backend RESTful services using Java and Spring Boot to support wealth management business workflows.</li>
-                        <li>Implemented and integrated REST APIs with internal backend modules and external financial service gateways.</li>
-                        <li>Wrote and maintained database queries and entity mappings using Spring Data JPA and Hibernate for data processing.</li>
+                    <ul class="latex-bullets" style="margin-bottom: 2px;">
+                        <li>Engineered backend RESTful services using Java and Spring Boot for wealth management domain applications, supporting client portfolio processing.</li>
+                        <li>Integrated secure REST APIs with external financial gateways and internal banking services, implementing authentication and payload validation.</li>
+                        <li>Designed relational database schemas, optimized complex SQL queries, and configured Hibernate entity mappings to streamline transaction processing.</li>
+                        <li>Collaborated in an Agile Scrum environment, conducting peer code reviews, sprint planning, and backlog grooming to maintain software quality.</li>
                     </ul>
 
+                    <!-- Role 2: Analyst -->
                     <div class="latex-role-row">
-                        <span class="latex-role-title">Application Development Analyst & Associate</span>
-                        <span class="latex-role-date">Feb 2018 – Aug 2021</span>
+                        <span class="latex-role-title">Application Development Analyst</span>
+                        <span class="latex-role-date">May 2020 – Aug 2021</span>
+                    </div>
+                    <ul class="latex-bullets" style="margin-bottom: 2px;">
+                        <li>Developed backend REST APIs using Java, Spring Boot, and JPA for order processing workflows with validation, logging, and error handling.</li>
+                        <li>Maintained relational database interactions, tuned SQL queries, and resolved backend defects identified during functional QA testing cycles.</li>
+                    </ul>
+
+                    <!-- Role 3: Associate -->
+                    <div class="latex-role-row">
+                        <span class="latex-role-title">Associate Software Engineer</span>
+                        <span class="latex-role-date">Feb 2018 – Apr 2020</span>
                     </div>
                     <ul class="latex-bullets">
-                        <li>Developed backend REST APIs using Java, Spring Boot, and JPA for order processing workflows with validation and error handling.</li>
-                        <li>Developed core Java application modules and scheduled batch processing jobs; authored JUnit tests and resolved defect tickets.</li>
+                        <li>Developed core Java application modules and scheduled batch processing jobs for public assistance case management systems.</li>
+                        <li>Authored automated unit tests with JUnit and Mockito to validate business logic and maintain regression test coverage across CI pipelines.</li>
                     </ul>
                 </div>
 
-                <!-- Projects and Technical Systems -->
+                <!-- Projects and Technical Systems (Sagar Farera Layout) -->
                 <div class="latex-sec-title">Projects and Technical Systems</div>
 
-                <div style="margin-bottom: 3px;">
+                <div style="margin-bottom: 2.5px;">
                     <div class="latex-project-row1">
                         <span>• Parking Lot System — Object-Oriented Design & Backend Service</span>
+                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
                     </div>
                     <div class="latex-project-row2">
                         <span class="latex-project-tech">Java, Spring Boot, REST APIs, Design Patterns (Factory, Strategy)</span>
-                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
                     </div>
                     <ul class="latex-bullets">
-                        <li>Implemented low-level design using Factory and Strategy patterns for parking spot allocation and dynamic fee calculation; exposed REST APIs for check-in/out and atomic spot reservation.</li>
+                        <li>Implemented low-level design using Factory and Strategy patterns for parking spot allocation and dynamic fee calculation; exposed REST APIs for check-in/out and atomic spot reservations.</li>
                     </ul>
                 </div>
 
-                <div style="margin-bottom: 3px;">
+                <div style="margin-bottom: 2.5px;">
                     <div class="latex-project-row1">
                         <span>• Movie Ticket Booking System — Transaction Management & Booking Service</span>
-                    </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, JPA, Concurrency & Seat Locking</span>
                         <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
                     </div>
+                    <div class="latex-project-row2">
+                        <span class="latex-project-tech">Java, Spring Boot, JPA, Concurrency & Seat Locking (@Transactional)</span>
+                    </div>
                     <ul class="latex-bullets">
-                        <li>Engineered booking service with concurrency handling and transactional seat locking (@Transactional) to prevent double-booking.</li>
+                        <li>Engineered booking service with concurrency handling and transactional seat locking (@Transactional) to eliminate double-booking; implemented catalog browsing and checkout workflows.</li>
                     </ul>
                 </div>
 
-                <div style="margin-bottom: 3px;">
+                <div style="margin-bottom: 2.5px;">
                     <div class="latex-project-row1">
                         <span>• Expense Sharing Application — Domain Modeling & Split Engine</span>
-                    </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Domain Modeling</span>
                         <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
                     </div>
+                    <div class="latex-project-row2">
+                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Domain Modeling, Debt Simplification</span>
+                    </div>
                     <ul class="latex-bullets">
-                        <li>Modeled split-expense domain logic supporting multiple split strategies (equal, exact, percentage); designed debt simplification logic to compute net balances.</li>
+                        <li>Modeled split-expense domain logic supporting multiple split strategies (equal, exact, percentage); designed debt simplification graph logic to compute minimal net cash settlements.</li>
                     </ul>
                 </div>
 
@@ -402,7 +425,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                         <span>Certified, 2023</span>
                     </div>
                     <div class="latex-edu-row2">
-                        <span class="latex-edu-degree">Microsoft • Cloud Concepts, Azure Architecture, Security & Governance</span>
+                        <span class="latex-edu-degree">Microsoft • Cloud Concepts, Azure Architecture, Security, Governance & Compliance</span>
                     </div>
                 </div>
 

@@ -69,7 +69,7 @@
             try {
                 const params = new URLSearchParams(window.location.search);
                 const userId = params.get('user') || 'shubhamfarera';
-                const pattern = params.get('template') || 'twopage';
+                const pattern = params.get('template') || 'onepage';
                 const basePath = `cv-content/${userId}`;
 
                 const [profile, summary, journey, skills, education, highlights] = await Promise.all([
