@@ -1,26 +1,12 @@
 window.renderOnePage = (DATA, ROOT, STYLE) => {
     STYLE.innerHTML = `
-        :root {
-            --primary: #0f172a;
-            --primary-dark: #020617;
-            --accent: #1e40af;
-            --accent-subtle: #2563eb;
-            --text-dark: #0f172a;
-            --text-body: #1e293b;
-            --text-muted: #475569;
-            --border: #cbd5e1;
-            --border-light: #e2e8f0;
-            --bg-page: #ffffff;
-            --bg-canvas: #f1f5f9;
-        }
-
         body {
-            background-color: var(--bg-canvas);
-            color: var(--text-body);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #000000;
+            font-family: "Times New Roman", Times, "TeX Gyre Termes", STIXGeneral, serif;
             margin: 0;
             padding: 1.5rem 0;
-            line-height: 1.34;
+            line-height: 1.27;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -31,222 +17,187 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         }
 
         .cv-sheet-onepage {
-            background: var(--bg-page);
+            background: #ffffff;
             width: 210mm;
             min-height: 297mm;
             max-height: 297mm;
-            padding: 9mm 14mm 7mm 14mm;
+            padding: 10mm 15mm 9mm 15mm;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border-radius: 2px;
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            position: relative;
             overflow: hidden;
+            font-family: "Times New Roman", Times, "TeX Gyre Termes", STIXGeneral, serif;
+            color: #000000;
         }
 
-        /* ATS Header - Clean Single Column */
-        .cv-header-onepage {
-            text-align: center;
-            border-bottom: 1.5px solid var(--primary);
-            padding-bottom: 5px;
-            margin-bottom: 7px;
-        }
-
-        .cv-header-onepage h1 {
-            font-size: 1.55rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 0 0 2px 0;
-            letter-spacing: -0.3px;
-            line-height: 1.15;
-            text-transform: uppercase;
-        }
-
-        .cv-header-onepage .cv-headline {
-            font-size: 0.83rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin: 0 0 4px 0;
-            letter-spacing: 0.1px;
-        }
-
-        .cv-contact-bar {
+        /* LaTeX Header (Exactly Sagar Farera Style) */
+        .latex-header {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 4px 13px;
-            font-size: 0.75rem;
-            color: var(--text-muted);
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
         }
 
-        .cv-contact-bar a {
-            color: var(--text-body);
+        .latex-name {
+            font-size: 1.70rem;
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.1;
+            margin: 0 0 3px 0;
+            letter-spacing: -0.2px;
+        }
+
+        .latex-contact-left, .latex-contact-right {
+            font-size: 0.81rem;
+            line-height: 1.32;
+            color: #000000;
+        }
+
+        .latex-contact-right {
+            text-align: right;
+        }
+
+        .latex-contact-left a, .latex-contact-right a {
+            color: #000000;
             text-decoration: none;
-            font-weight: 500;
         }
 
-        .cv-contact-bar a:hover {
-            color: var(--accent);
+        .latex-contact-left a:hover, .latex-contact-right a:hover {
             text-decoration: underline;
         }
 
-        .cv-contact-sep {
-            color: var(--border);
-            user-select: none;
-        }
-
-        /* Standard ATS Headings */
-        .cv-sec-title-onepage {
-            font-size: 0.80rem;
+        /* LaTeX Section Title */
+        .latex-sec-title {
+            font-size: 0.98rem;
             font-weight: 700;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin: 7px 0 3.5px 0;
-            padding-bottom: 1.5px;
-            border-bottom: 1.2px solid var(--border);
+            color: #000000;
+            border-bottom: 1px solid #000000;
+            margin: 6px 0 4px 0;
+            padding-bottom: 1px;
         }
 
-        /* Summary */
-        .cv-summary-onepage {
-            font-size: 0.745rem;
-            color: var(--text-body);
-            margin: 0 0 4px 0;
-            line-height: 1.35;
-            text-align: justify;
-        }
-
-        /* Skills */
-        .cv-skills-grid-onepage {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-            margin-bottom: 4px;
-            font-size: 0.74rem;
-        }
-
-        .cv-skill-line-onepage {
-            line-height: 1.32;
-        }
-
-        .cv-skill-line-onepage strong {
-            color: var(--primary);
-            font-weight: 700;
-            display: inline-block;
-            min-width: 145px;
-        }
-
-        /* Job Entry */
-        .cv-job-onepage {
-            margin-bottom: 5px;
-        }
-
-        .cv-job-header-onepage {
+        /* Education Entry */
+        .latex-edu-row1 {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2px;
-        }
-
-        .cv-job-role-onepage {
-            font-size: 0.80rem;
+            font-size: 0.83rem;
             font-weight: 700;
-            color: var(--primary);
+            color: #000000;
         }
 
-        .cv-job-company-onepage {
-            color: var(--text-body);
-            font-weight: 600;
+        .latex-edu-row2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.80rem;
+            color: #000000;
+        }
+
+        .latex-edu-degree, .latex-edu-date {
+            font-style: italic;
+        }
+
+        /* Skills Summary */
+        .latex-skills-list {
+            margin: 0;
+            padding-left: 16px;
             font-size: 0.79rem;
+            line-height: 1.30;
+            list-style-type: disc;
         }
 
-        .cv-job-date-onepage {
-            font-size: 0.73rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            white-space: nowrap;
+        .latex-skills-list li {
+            margin-bottom: 1.5px;
         }
 
-        .cv-job-bullets-onepage {
-            margin: 0;
-            padding-left: 14px;
-            font-size: 0.735rem;
-            color: var(--text-body);
-            line-height: 1.32;
+        .latex-skills-list strong {
+            font-weight: 700;
+            color: #000000;
         }
 
-        .cv-job-bullets-onepage li {
-            margin-bottom: 2px;
-            text-align: justify;
-        }
-
-        /* Project Entry */
-        .cv-proj-onepage {
-            margin-bottom: 4px;
-        }
-
-        .cv-proj-header-onepage {
+        /* Work Experience */
+        .latex-company-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.77rem;
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1px;
+        }
+
+        .latex-role-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.80rem;
+            color: #000000;
             margin-bottom: 1.5px;
         }
 
-        .cv-proj-name-onepage {
+        .latex-role-title, .latex-role-date {
+            font-style: italic;
+        }
+        .latex-role-title {
             font-weight: 700;
-            color: var(--primary);
         }
 
-        .cv-proj-tech-onepage {
-            color: var(--accent);
-            font-size: 0.73rem;
-            font-weight: 600;
-        }
-
-        .cv-proj-bullets-onepage {
+        /* Sub-bullets */
+        .latex-bullets {
             margin: 0;
-            padding-left: 14px;
-            font-size: 0.73rem;
-            color: var(--text-body);
-            line-height: 1.30;
+            padding-left: 18px;
+            font-size: 0.775rem;
+            line-height: 1.28;
+            list-style-type: circle;
         }
 
-        .cv-proj-bullets-onepage li {
+        .latex-bullets li {
             margin-bottom: 1.5px;
             text-align: justify;
         }
 
-        /* Bottom Grid: Education & Certifications */
-        .cv-bottom-grid-onepage {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 12px;
-            margin-top: 3px;
+        /* Projects */
+        .latex-project-row1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #000000;
         }
 
-        .cv-meta-item-onepage {
-            font-size: 0.73rem;
-            line-height: 1.30;
-            color: var(--text-body);
+        .latex-project-row2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.78rem;
+            color: #000000;
+            margin-bottom: 1.5px;
         }
 
-        .cv-meta-item-onepage strong {
-            color: var(--primary);
+        .latex-project-tech, .latex-project-link {
+            font-style: italic;
         }
 
-        /* Sheet Footer */
+        .latex-project-link {
+            color: #000000;
+            text-decoration: none;
+        }
+
         .cv-sheet-footer-onepage {
             margin-top: auto;
-            padding-top: 3px;
-            border-top: 1px solid var(--border-light);
+            padding-top: 2px;
+            border-top: 0.5px solid #cccccc;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.66rem;
-            color: var(--text-muted);
+            font-size: 0.65rem;
+            color: #555555;
+            font-family: "Times New Roman", Times, serif;
         }
 
         /* Print Media Styles */
@@ -258,12 +209,14 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
 
             html, body {
                 background: white !important;
+                color: #000000 !important;
                 padding: 0 !important;
                 margin: 0 !important;
                 width: 100% !important;
                 height: auto !important;
                 min-height: 0 !important;
                 overflow: visible !important;
+                font-family: "Times New Roman", Times, serif !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
@@ -294,6 +247,7 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                 break-after: avoid !important;
                 overflow: visible !important;
                 box-sizing: border-box !important;
+                font-family: "Times New Roman", Times, serif !important;
             }
 
             #control-panel, .edit-trigger {
@@ -302,149 +256,156 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
         }
     `;
 
-    const tcsJob = DATA.journey[0]; // TCS
-    const accSrAnalyst = DATA.journey[1]; // Accenture Sr Analyst (Sept 2021 - Aug 2023)
-
-    const githubSocial = DATA.profile.social.find(s => s.platform.toLowerCase().includes('github'));
-    const linkedinSocial = DATA.profile.social.find(s => s.platform.toLowerCase().includes('linkedin'));
+    const tcsJob = DATA.journey[0];
+    const accSrAnalyst = DATA.journey[1];
+    const accAnalyst = DATA.journey[2];
+    const accAssociate = DATA.journey[3];
 
     ROOT.innerHTML = `
         <div class="cv-wrapper">
             <section class="cv-sheet-onepage">
-                <header class="cv-header-onepage">
-                    <h1>${DATA.profile.name}</h1>
-                    <div class="cv-headline">Senior Java Backend Developer | Java | Spring Boot | REST APIs | Microservices | SQL</div>
-                    <div class="cv-contact-bar">
-                        <span>${DATA.profile.contact.location}</span>
-                        <span class="cv-contact-sep">•</span>
-                        <span>${DATA.profile.contact.phone}</span>
-                        <span class="cv-contact-sep">•</span>
-                        <a href="mailto:${DATA.profile.contact.email}">${DATA.profile.contact.email}</a>
-                        ${linkedinSocial ? `<span class="cv-contact-sep">•</span><a href="${linkedinSocial.url}" target="_blank">LinkedIn</a>` : ''}
-                        ${githubSocial ? `<span class="cv-contact-sep">•</span><a href="${githubSocial.url}" target="_blank">GitHub</a>` : ''}
+                <!-- Header (Sagar Farera Layout) -->
+                <header class="latex-header">
+                    <div class="latex-header-left">
+                        <div class="latex-name">${DATA.profile.name}</div>
+                        <div class="latex-contact-left">
+                            LinkedIn: <a href="https://www.linkedin.com/in/shubham-farera-343b5111b" target="_blank">www.linkedin.com/in/shubham-farera-343b5111b</a><br>
+                            GitHub: <a href="https://github.com/sfarera" target="_blank">github.com/sfarera</a>
+                        </div>
+                    </div>
+                    <div class="latex-contact-right">
+                        Email: <a href="mailto:${DATA.profile.contact.email}">${DATA.profile.contact.email}</a><br>
+                        Mobile: ${DATA.profile.contact.phone}<br>
+                        Location: ${DATA.profile.contact.location}
                     </div>
                 </header>
 
-                <!-- Professional Summary -->
-                <div class="cv-sec-title-onepage">Professional Summary</div>
-                <p class="cv-summary-onepage">${DATA.summary.summary[0]}</p>
-
-                <!-- Technical Skills -->
-                <div class="cv-sec-title-onepage">Technical Skills</div>
-                <div class="cv-skills-grid-onepage">
-                    <div class="cv-skill-line-onepage">
-                        <strong>Professional Core:</strong>
-                        <span>Java (8/11/17), OOP, Collections, Streams, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs</span>
+                <!-- Education -->
+                <div class="latex-sec-title">Education</div>
+                <div>
+                    <div class="latex-edu-row1">
+                        <span>• Shri Govindram Seksaria Institute of Technology and Science (SGSITS)</span>
+                        <span>Indore, Madhya Pradesh, India</span>
                     </div>
-                    <div class="cv-skill-line-onepage">
-                        <strong>Databases & Caching:</strong>
-                        <span>SQL, MySQL, Oracle, Redis, JUnit, Mockito, Unit Testing, Debugging & Troubleshooting, SonarQube</span>
-                    </div>
-                    <div class="cv-skill-line-onepage">
-                        <strong>DevOps & Infrastructure:</strong>
-                        <span>Kubernetes, NGINX Ingress, Docker, Git, Maven, Jenkins CI/CD</span>
-                    </div>
-                    <div class="cv-skill-line-onepage">
-                        <strong>Additional Knowledge:</strong>
-                        <span>Apache Kafka, Elasticsearch, Microservices Architecture, Distributed Systems Concepts, HLD & LLD</span>
+                    <div class="latex-edu-row2">
+                        <span class="latex-edu-degree">Bachelor of Engineering in Information Technology | GPA: 7.10/10</span>
+                        <span class="latex-edu-date">July 2013 – June 2017</span>
                     </div>
                 </div>
 
-                <!-- Professional Experience -->
-                <div class="cv-sec-title-onepage">Professional Experience</div>
+                <!-- Skills Summary -->
+                <div class="latex-sec-title">Skills Summary</div>
+                <ul class="latex-skills-list">
+                    <li><strong>• Languages :</strong> Java (8 / 11 / 17), SQL</li>
+                    <li><strong>• Backend :</strong> Spring Boot, Spring MVC, Spring Data JPA, Hibernate, RESTful APIs, Microservices</li>
+                    <li><strong>• Databases & Caching :</strong> MySQL, Oracle, Redis</li>
+                    <li><strong>• DevOps & Cloud :</strong> Kubernetes, NGINX Ingress, Docker, Jenkins CI/CD, Git, Maven, Microsoft Azure (AZ-900)</li>
+                    <li><strong>• Testing & Quality :</strong> JUnit, Mockito, SonarQube, Unit Testing, Debugging & Troubleshooting</li>
+                    <li><strong>• Additional Knowledge :</strong> Apache Kafka, Elasticsearch, Distributed Systems Concepts, HLD & LLD</li>
+                </ul>
+
+                <!-- Work Experience -->
+                <div class="latex-sec-title">Work Experience</div>
 
                 <!-- TCS -->
-                <div class="cv-job-onepage">
-                    <div class="cv-job-header-onepage">
-                        <div>
-                            <span class="cv-job-role-onepage">${tcsJob.role}</span> — <span class="cv-job-company-onepage">${tcsJob.company}</span>
-                        </div>
-                        <span class="cv-job-date-onepage">${tcsJob.date}</span>
+                <div style="margin-bottom: 4px;">
+                    <div class="latex-company-row">
+                        <span>• Tata Consultancy Services — Software Development (Backend)</span>
+                        <span>Pune, India</span>
                     </div>
-                    <ul class="cv-job-bullets-onepage">
+                    <div class="latex-role-row">
+                        <span class="latex-role-title">IT Analyst (Senior Backend Engineer)</span>
+                        <span class="latex-role-date">Oct 2023 – Present</span>
+                    </div>
+                    <ul class="latex-bullets">
                         <li>Developed and maintained Java and Spring Boot backend services supporting enterprise business workflows.</li>
-                        <li>Implemented REST APIs for application features with input validation, exception handling, and database integration.</li>
-                        <li>Worked with Spring Data JPA and Hibernate for database operations, and integrated Redis caching to optimize data access.</li>
-                        <li>Deployed services to Kubernetes clusters, configuring NGINX Ingress routing rules, endpoints, and health check probes.</li>
+                        <li>Implemented REST APIs for application features, including request validation, exception handling, and database integration.</li>
+                        <li>Worked with Spring Data JPA and Hibernate for database operations, and integrated Redis caching to reduce repetitive query load.</li>
+                        <li>Deployed containerized backend services to Kubernetes clusters, configuring NGINX Ingress routing rules, endpoints, and health checks.</li>
+                        <li>Investigated application defects, resolved backend issues through debugging, and authored JUnit/Mockito test suites.</li>
                     </ul>
                 </div>
 
-                <!-- Accenture: Senior Analyst -->
-                <div class="cv-job-onepage">
-                    <div class="cv-job-header-onepage">
-                        <div>
-                            <span class="cv-job-role-onepage">${accSrAnalyst.role}</span> — <span class="cv-job-company-onepage">${accSrAnalyst.company}</span>
-                        </div>
-                        <span class="cv-job-date-onepage">${accSrAnalyst.date}</span>
+                <!-- Accenture -->
+                <div style="margin-bottom: 4px;">
+                    <div class="latex-company-row">
+                        <span>• Accenture — Software Development (Backend)</span>
+                        <span>Pune, India</span>
                     </div>
-                    <ul class="cv-job-bullets-onepage">
+                    <div class="latex-role-row">
+                        <span class="latex-role-title">Application Development Senior Analyst</span>
+                        <span class="latex-role-date">Sept 2021 – Aug 2023</span>
+                    </div>
+                    <ul class="latex-bullets" style="margin-bottom: 3px;">
                         <li>Developed backend RESTful services using Java and Spring Boot to support wealth management business workflows.</li>
                         <li>Implemented and integrated REST APIs with internal backend modules and external financial service gateways.</li>
                         <li>Wrote and maintained database queries and entity mappings using Spring Data JPA and Hibernate for data processing.</li>
                     </ul>
-                </div>
 
-                <!-- Accenture: Analyst & Associate -->
-                <div class="cv-job-onepage">
-                    <div class="cv-job-header-onepage">
-                        <div>
-                            <span class="cv-job-role-onepage">Application Development Analyst & Associate</span> — <span class="cv-job-company-onepage">Accenture</span>
-                        </div>
-                        <span class="cv-job-date-onepage">Feb 2018 – Aug 2021</span>
+                    <div class="latex-role-row">
+                        <span class="latex-role-title">Application Development Analyst & Associate</span>
+                        <span class="latex-role-date">Feb 2018 – Aug 2021</span>
                     </div>
-                    <ul class="cv-job-bullets-onepage">
+                    <ul class="latex-bullets">
                         <li>Developed backend REST APIs using Java, Spring Boot, and JPA for order processing workflows with validation and error handling.</li>
                         <li>Developed core Java application modules and scheduled batch processing jobs; authored JUnit tests and resolved defect tickets.</li>
                     </ul>
                 </div>
 
-                <!-- Selected Hands-On Projects -->
-                <div class="cv-sec-title-onepage">Selected Hands-On Projects</div>
-                <div class="cv-proj-onepage">
-                    <div class="cv-proj-header-onepage">
-                        <div>
-                            <span class="cv-proj-name-onepage">Parking Lot System</span>
-                            <span class="cv-proj-tech-onepage">| Java, Spring Boot, REST APIs, Object-Oriented Design</span>
-                        </div>
-                        <span style="font-size: 0.71rem; color: var(--text-muted);">github.com/sfarera</span>
+                <!-- Projects and Technical Systems -->
+                <div class="latex-sec-title">Projects and Technical Systems</div>
+
+                <div style="margin-bottom: 3px;">
+                    <div class="latex-project-row1">
+                        <span>• Parking Lot System — Object-Oriented Design & Backend Service</span>
                     </div>
-                    <ul class="cv-proj-bullets-onepage">
-                        <li>Implemented low-level design using Factory and Strategy patterns for parking spot allocation and dynamic fee calculation; exposed REST APIs for check-in/out.</li>
+                    <div class="latex-project-row2">
+                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Design Patterns (Factory, Strategy)</span>
+                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
+                    </div>
+                    <ul class="latex-bullets">
+                        <li>Implemented low-level design using Factory and Strategy patterns for parking spot allocation and dynamic fee calculation; exposed REST APIs for check-in/out and atomic spot reservation.</li>
                     </ul>
                 </div>
 
-                <div class="cv-proj-onepage">
-                    <div class="cv-proj-header-onepage">
-                        <div>
-                            <span class="cv-proj-name-onepage">Movie Ticket Booking System</span>
-                            <span class="cv-proj-tech-onepage">| Java, Spring Boot, JPA, Transaction Management</span>
-                        </div>
-                        <span style="font-size: 0.71rem; color: var(--text-muted);">github.com/sfarera</span>
+                <div style="margin-bottom: 3px;">
+                    <div class="latex-project-row1">
+                        <span>• Movie Ticket Booking System — Transaction Management & Booking Service</span>
                     </div>
-                    <ul class="cv-proj-bullets-onepage">
+                    <div class="latex-project-row2">
+                        <span class="latex-project-tech">Java, Spring Boot, JPA, Concurrency & Seat Locking</span>
+                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
+                    </div>
+                    <ul class="latex-bullets">
                         <li>Engineered booking service with concurrency handling and transactional seat locking (@Transactional) to prevent double-booking.</li>
                     </ul>
                 </div>
 
-                <!-- Bottom 2-Column: Education & Certifications -->
-                <div class="cv-bottom-grid-onepage">
-                    <div>
-                        <div class="cv-sec-title-onepage">Education</div>
-                        <div class="cv-meta-item-onepage">
-                            <strong>Bachelor of Engineering (B.E.) in Information Technology</strong><br>
-                            SGSITS Indore (2013 – 2017) | <strong>CGPA: 7.1 / 10.0</strong>
-                        </div>
+                <div style="margin-bottom: 3px;">
+                    <div class="latex-project-row1">
+                        <span>• Expense Sharing Application — Domain Modeling & Split Engine</span>
                     </div>
-                    <div>
-                        <div class="cv-sec-title-onepage">Certifications</div>
-                        <div class="cv-meta-item-onepage">
-                            <strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong><br>
-                            Microsoft • Certified, 2023
-                        </div>
+                    <div class="latex-project-row2">
+                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Domain Modeling</span>
+                        <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
+                    </div>
+                    <ul class="latex-bullets">
+                        <li>Modeled split-expense domain logic supporting multiple split strategies (equal, exact, percentage); designed debt simplification logic to compute net balances.</li>
+                    </ul>
+                </div>
+
+                <!-- Certifications -->
+                <div class="latex-sec-title">Certifications</div>
+                <div>
+                    <div class="latex-edu-row1">
+                        <span>• Microsoft Certified: Azure Fundamentals (AZ-900)</span>
+                        <span>Certified, 2023</span>
+                    </div>
+                    <div class="latex-edu-row2">
+                        <span class="latex-edu-degree">Microsoft • Cloud Concepts, Azure Architecture, Security & Governance</span>
                     </div>
                 </div>
 
-                <!-- Sheet Footer -->
                 <div class="cv-sheet-footer-onepage">
                     <span>${DATA.profile.name} — Senior Java Backend Developer</span>
                     <span>1-Page Executive Resume</span>

@@ -97,8 +97,8 @@
 
     <div id="control-panel">
         <h4>Select Design</h4>
-        <button class="pattern-btn" onclick="startRender('onepage')" style="background: rgba(16,185,129,0.22); border-color: #10b981;">📄 1-Page Executive (A4)</button>
-        <button class="pattern-btn active" onclick="startRender('twopage')" style="background: rgba(37,99,235,0.25); border-color: #3b82f6;">⭐ 2-Page Executive (A4)</button>
+        <button class="pattern-btn" onclick="startRender('onepage')" style="background: rgba(16,185,129,0.22); border-color: #10b981;">📄 1-Page (Sagar Farera Format)</button>
+        <button class="pattern-btn active" onclick="startRender('twopage')" style="background: rgba(37,99,235,0.25); border-color: #3b82f6;">⭐ 2-Page (Sagar Farera Format)</button>
         <button class="pattern-btn" onclick="startRender('split')">1. Split View</button>
         <button class="pattern-btn" onclick="startRender('glass')">2. Glassmorphism</button>
         <button class="pattern-btn" onclick="startRender('clean')">3. Modern Clean</button>
@@ -277,11 +277,13 @@
         }
 
         function downloadCurrentPDF() {
-            if (CURRENT_PATTERN === 'onepage') {
-                window.location.href = 'Shubham_Farera_Resume_1Page.pdf';
-            } else {
-                window.location.href = 'Shubham_Farera_Resume_2Page.pdf';
-            }
+            const fileName = CURRENT_PATTERN === 'onepage' ? 'Shubham_Farera_Resume_1Page.pdf' : 'Shubham_Farera_Resume_2Page.pdf';
+            const a = document.createElement('a');
+            a.href = fileName;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
 
         // --- EDITING LOGIC ---
