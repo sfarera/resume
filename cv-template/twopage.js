@@ -19,8 +19,8 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             color: var(--text-body);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
-            padding: 1.5rem 0;
-            line-height: 1.42;
+            padding: 1.25rem 0;
+            line-height: 1.40;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -28,7 +28,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         .cv-sheet {
@@ -36,7 +36,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             width: 210mm;
             min-height: 297mm;
             height: 297mm;
-            padding: 12mm 16mm 10mm 16mm;
+            padding: 11mm 16mm 10mm 16mm;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             border-radius: 2px;
@@ -51,25 +51,25 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         .cv-header {
             text-align: center;
             border-bottom: 1.5px solid var(--primary);
-            padding-bottom: 8px;
-            margin-bottom: 9px;
+            padding-bottom: 7px;
+            margin-bottom: 8px;
         }
 
         .cv-header h1 {
-            font-size: 1.68rem;
+            font-size: 1.66rem;
             font-weight: 700;
             color: var(--primary);
-            margin: 0 0 3px 0;
+            margin: 0 0 2.5px 0;
             letter-spacing: -0.3px;
             line-height: 1.15;
             text-transform: uppercase;
         }
 
         .cv-header .cv-headline {
-            font-size: 0.86rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: var(--accent);
-            margin: 0 0 6px 0;
+            margin: 0 0 5px 0;
             letter-spacing: 0.1px;
         }
 
@@ -100,55 +100,55 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         /* Standard ATS Headings */
         .cv-sec-title {
-            font-size: 0.84rem;
+            font-size: 0.83rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin: 9px 0 5px 0;
+            margin: 8px 0 4.5px 0;
             padding-bottom: 2px;
             border-bottom: 1.2px solid var(--border);
         }
 
         /* Summary */
         .cv-summary-text {
-            font-size: 0.775rem;
+            font-size: 0.77rem;
             color: var(--text-body);
-            margin: 0 0 5px 0;
-            line-height: 1.42;
+            margin: 0 0 4.5px 0;
+            line-height: 1.40;
             text-align: justify;
         }
 
         /* Technical Skills Section */
         .cv-skills-subgroup {
-            margin-bottom: 4px;
+            margin-bottom: 3.5px;
         }
 
         .cv-skills-subtitle {
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             font-weight: 700;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.4px;
-            margin: 3px 0 2px 0;
+            margin: 2.5px 0 1.5px 0;
         }
 
         .cv-skills-grid {
             display: flex;
             flex-direction: column;
-            gap: 3px;
-            font-size: 0.765rem;
+            gap: 2.5px;
+            font-size: 0.76rem;
         }
 
         .cv-skill-line {
-            line-height: 1.38;
+            line-height: 1.36;
         }
 
         .cv-skill-line strong {
             color: var(--primary);
             font-weight: 700;
             display: inline-block;
-            min-width: 150px;
+            min-width: 148px;
         }
 
         .cv-skill-line span {
@@ -157,18 +157,18 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         /* Experience Section */
         .cv-job {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
 
         .cv-job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 3px;
+            margin-bottom: 2.5px;
         }
 
         .cv-job-title-group {
-            font-size: 0.82rem;
+            font-size: 0.81rem;
         }
 
         .cv-job-role {
@@ -182,7 +182,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         }
 
         .cv-job-meta {
-            font-size: 0.75rem;
+            font-size: 0.745rem;
             font-weight: 600;
             color: var(--text-muted);
             white-space: nowrap;
@@ -191,13 +191,13 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         .cv-job-bullets {
             margin: 0;
             padding-left: 15px;
-            font-size: 0.765rem;
+            font-size: 0.76rem;
             color: var(--text-body);
-            line-height: 1.39;
+            line-height: 1.37;
         }
 
         .cv-job-bullets li {
-            margin-bottom: 3.5px;
+            margin-bottom: 3px;
             text-align: justify;
         }
 
@@ -208,7 +208,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
 
         /* Project Entry */
         .cv-project-item {
-            margin-bottom: 7px;
+            margin-bottom: 8px;
         }
 
         .cv-project-header {
@@ -216,7 +216,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 2.5px;
-            font-size: 0.81rem;
+            font-size: 0.82rem;
         }
 
         .cv-project-name {
@@ -246,26 +246,26 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         .cv-project-bullets {
             margin: 0;
             padding-left: 15px;
-            font-size: 0.76rem;
+            font-size: 0.765rem;
             color: var(--text-body);
-            line-height: 1.38;
+            line-height: 1.39;
         }
 
         .cv-project-bullets li {
-            margin-bottom: 3px;
+            margin-bottom: 3.5px;
             text-align: justify;
         }
 
         /* Education & Certifications */
         .cv-item-block {
-            margin-bottom: 6px;
+            margin-bottom: 7px;
         }
 
         .cv-item-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.79rem;
+            font-size: 0.80rem;
             margin-bottom: 2px;
         }
 
@@ -287,7 +287,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
         }
 
         .cv-item-details {
-            font-size: 0.75rem;
+            font-size: 0.755rem;
             color: var(--text-body);
             line-height: 1.36;
         }
@@ -431,7 +431,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </div>
                 </div>
 
-                <div class="cv-skills-subgroup" style="margin-top: 4px;">
+                <div class="cv-skills-subgroup" style="margin-top: 3px;">
                     <div class="cv-skills-subtitle">Additional Technical Knowledge (Ongoing Self-Study & Hands-On Practice)</div>
                     <div class="cv-skills-grid">
                         <div class="cv-skill-line">
@@ -470,17 +470,6 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </ul>
                 </div>
 
-                <div class="cv-sheet-footer">
-                    <span>${DATA.profile.name} — Senior Java Backend Developer</span>
-                    <span>Page 1 of 2</span>
-                </div>
-            </section>
-
-            <!-- ================= PAGE 2 ================= -->
-            <section class="cv-sheet" id="page-2">
-                <!-- Professional Experience Continued -->
-                <div class="cv-sec-title">Professional Experience (Continued)</div>
-
                 <!-- Accenture: Analyst -->
                 <div class="cv-job">
                     <div class="cv-job-header">
@@ -494,8 +483,19 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </ul>
                 </div>
 
+                <div class="cv-sheet-footer">
+                    <span>${DATA.profile.name} — Senior Java Backend Developer</span>
+                    <span>Page 1 of 2</span>
+                </div>
+            </section>
+
+            <!-- ================= PAGE 2 ================= -->
+            <section class="cv-sheet" id="page-2">
+                <!-- Professional Experience Continued -->
+                <div class="cv-sec-title">Professional Experience (Continued)</div>
+
                 <!-- Accenture: Associate -->
-                <div class="cv-job">
+                <div class="cv-job" style="margin-bottom: 9px;">
                     <div class="cv-job-header">
                         <div class="cv-job-title-group">
                             <span class="cv-job-role">${accAssociate.role}</span> — <span class="cv-job-company">${accAssociate.company}</span>
@@ -504,6 +504,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     </div>
                     <ul class="cv-job-bullets">
                         ${accAssociate.details.map(d => `<li>${d}</li>`).join('')}
+                        <li>Authored technical documentation, unit test cases, and release deployment notes adhering to enterprise SDLC and Agile delivery processes.</li>
                     </ul>
                 </div>
 
@@ -521,6 +522,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     <ul class="cv-project-bullets">
                         <li>Implemented low-level object-oriented design applying Creational and Behavioral design patterns (Factory, Strategy) to manage parking spots, vehicle types, and dynamic fee calculation strategies.</li>
                         <li>Developed REST APIs to handle parking ticket issuance, vehicle check-in/checkout workflows, and real-time slot availability tracking.</li>
+                        <li>Applied thread-safe synchronization and concurrent collections to ensure atomic spot reservations under concurrent vehicle entry requests.</li>
                     </ul>
                 </div>
 
@@ -535,6 +537,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     <ul class="cv-project-bullets">
                         <li>Engineered a booking service with relational data modeling, handling concurrent seat reservations, show scheduling, and pricing tiers.</li>
                         <li>Utilized Spring transaction management (@Transactional) and database locking mechanisms to prevent double-booking and maintain transactional integrity.</li>
+                        <li>Implemented RESTful payment reconciliation endpoints and automated booking expiration timers using Spring scheduling.</li>
                     </ul>
                 </div>
 
@@ -549,6 +552,7 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                     <ul class="cv-project-bullets">
                         <li>Modeled split-expense domain logic supporting multiple split strategies (equal, exact amounts, percentage) among user groups.</li>
                         <li>Exposed RESTful endpoints for group management, expense creation, and calculating consolidated balances to minimize settlement transactions.</li>
+                        <li>Designed graph-based debt simplification logic to compute net balances and minimize total cash flow settlements among group participants.</li>
                     </ul>
                 </div>
 
@@ -565,6 +569,9 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                             <span style="font-size: 0.77rem; font-weight: 600; color: var(--primary);">CGPA: 7.1 / 10.0</span>
                         </div>
                     </div>
+                    <div class="cv-item-details" style="margin-top: 2px;">
+                        <strong>Key Coursework:</strong> Data Structures & Algorithms, Object-Oriented Analysis & Design, Database Management Systems, Operating Systems, Computer Networks.
+                    </div>
                 </div>
 
                 <!-- Certifications -->
@@ -576,6 +583,9 @@ window.renderTwoPage = (DATA, ROOT, STYLE) => {
                             <span class="cv-item-inst">Microsoft • Cloud Concepts, Azure Architecture, Security & Governance</span>
                         </div>
                         <span class="cv-item-date">Certified, 2023</span>
+                    </div>
+                    <div class="cv-item-details" style="margin-top: 1.5px;">
+                        Demonstrated foundational knowledge of cloud services, Azure resource management, identity management, and governance.
                     </div>
                 </div>
 
