@@ -170,30 +170,23 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
             text-align: justify;
         }
 
-        /* Projects */
-        .latex-project-row1 {
+        /* Projects (Exact Sagar Farera Layout: 1-line title/link + 1 pointer highlight) */
+        .latex-project-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 0.80rem;
-            font-weight: 700;
-            color: #000000;
-        }
-
-        .latex-project-row2 {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-size: 0.765rem;
+            font-size: 0.81rem;
             color: #000000;
             margin-bottom: 0.5px;
         }
 
-        .latex-project-tech, .latex-project-link {
-            font-style: italic;
+        .latex-project-title {
+            font-weight: 700;
         }
 
         .latex-project-link {
+            font-style: italic;
+            font-size: 0.77rem;
             color: #000000;
             text-decoration: none;
         }
@@ -375,45 +368,36 @@ window.renderOnePage = (DATA, ROOT, STYLE) => {
                     </ul>
                 </div>
 
-                <!-- Projects and Technical Systems (Sagar Farera Layout) -->
-                <div class="latex-sec-title">Projects and Technical Systems</div>
+                <!-- Technical Projects & Highlights (1 Pointer Highlights Only) -->
+                <div class="latex-sec-title">Technical Projects & Highlights</div>
 
                 <div style="margin-bottom: 2.5px;">
-                    <div class="latex-project-row1">
-                        <span>• Parking Lot System — Object-Oriented Design & Backend Service</span>
+                    <div class="latex-project-row">
+                        <span class="latex-project-title">• Parking Lot System — Object-Oriented Design (Java, Spring Boot)</span>
                         <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
                     </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Design Patterns (Factory, Strategy)</span>
-                    </div>
                     <ul class="latex-bullets">
-                        <li>Implemented low-level design using Factory and Strategy patterns for parking spot allocation and dynamic fee calculation; exposed REST APIs for check-in/out and atomic spot reservations.</li>
+                        <li>Implemented low-level design applying Factory and Strategy patterns for automated slot allocation, dynamic fee calculation, and REST APIs.</li>
                     </ul>
                 </div>
 
                 <div style="margin-bottom: 2.5px;">
-                    <div class="latex-project-row1">
-                        <span>• Movie Ticket Booking System — Transaction Management & Booking Service</span>
+                    <div class="latex-project-row">
+                        <span class="latex-project-title">• Movie Ticket Booking System — Transaction Management (Spring Boot, JPA)</span>
                         <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
                     </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, JPA, Concurrency & Seat Locking (@Transactional)</span>
-                    </div>
                     <ul class="latex-bullets">
-                        <li>Engineered booking service with concurrency handling and transactional seat locking (@Transactional) to eliminate double-booking; implemented catalog browsing and checkout workflows.</li>
+                        <li>Engineered booking service with concurrency handling and transactional seat locking (@Transactional) to eliminate double-booking.</li>
                     </ul>
                 </div>
 
                 <div style="margin-bottom: 2.5px;">
-                    <div class="latex-project-row1">
-                        <span>• Expense Sharing Application — Domain Modeling & Split Engine</span>
+                    <div class="latex-project-row">
+                        <span class="latex-project-title">• Expense Sharing Application — Domain Modeling & Split Engine (Java, REST)</span>
                         <a href="https://github.com/sfarera" target="_blank" class="latex-project-link">github.com/sfarera</a>
                     </div>
-                    <div class="latex-project-row2">
-                        <span class="latex-project-tech">Java, Spring Boot, REST APIs, Domain Modeling, Debt Simplification</span>
-                    </div>
                     <ul class="latex-bullets">
-                        <li>Modeled split-expense domain logic supporting multiple split strategies (equal, exact, percentage); designed debt simplification graph logic to compute minimal net cash settlements.</li>
+                        <li>Modeled multi-strategy expense splitting (equal, exact, percentage) with debt simplification algorithm to compute minimal net settlements.</li>
                     </ul>
                 </div>
 

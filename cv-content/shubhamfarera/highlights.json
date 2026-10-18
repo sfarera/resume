@@ -2,29 +2,26 @@
   "projects": [
     {
       "name": "Parking Lot System",
-      "tech": "Java, Spring Boot, REST APIs, Object-Oriented Design",
+      "tech": "Java, Spring Boot, REST APIs, Object-Oriented Design (Factory, Strategy)",
       "link": "https://github.com/sfarera",
       "bullets": [
-        "Implemented low-level object-oriented design applying Creational and Behavioral design patterns (Factory, Strategy) to manage parking spots, vehicle types, and dynamic fee calculation strategies.",
-        "Developed REST APIs to handle parking ticket issuance, vehicle check-in/checkout workflows, and real-time slot availability tracking."
+        "Implemented low-level design in Java and Spring Boot applying Factory and Strategy patterns for automated slot allocation, dynamic fee calculation, and RESTful check-in/out APIs."
       ]
     },
     {
       "name": "Movie Ticket Booking System",
-      "tech": "Java, Spring Boot, JPA, Transaction Management",
+      "tech": "Java, Spring Boot, JPA, Concurrency & Seat Locking",
       "link": "https://github.com/sfarera",
       "bullets": [
-        "Engineered a booking service with relational data modeling, handling concurrent seat reservations, show scheduling, and pricing tiers.",
-        "Utilized Spring transaction management (@Transactional) and database locking mechanisms to prevent double-booking and maintain transactional integrity."
+        "Built backend booking workflow in Java and Spring Boot with concurrency handling and transactional seat locking (@Transactional) to eliminate double-booking."
       ]
     },
     {
       "name": "Expense Sharing Application",
-      "tech": "Java, Spring Boot, Object-Oriented Design",
+      "tech": "Java, Spring Boot, REST APIs, Debt Simplification",
       "link": "https://github.com/sfarera",
       "bullets": [
-        "Modeled split-expense domain logic supporting multiple split strategies (equal, exact amounts, percentage) among user groups.",
-        "Exposed RESTful endpoints for group management, expense creation, and calculating consolidated balances to minimize settlement transactions."
+        "Modeled split-expense domain logic supporting multiple split strategies (equal, exact, percentage) with debt simplification logic to calculate minimal net settlements."
       ]
     }
   ],
